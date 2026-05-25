@@ -8,6 +8,8 @@ const REFERRAL_URL  = 'https://www.robertsspaceindustries.com/enlist?referral=ST
 // ─── TRANSLATIONS ────────────────────────────────────────────────────────────
 const i18n = {
   de: {
+    logoBonusTag: 'Referral Bonus',
+    mfrTag: 'Schiffshersteller im Verse',
     // Trust Bar
     trust1Val: '100% kostenlos', trust1Lbl: 'keine versteckten Kosten',
     trust2Val: 'In 2 Minuten', trust2Lbl: 'registriert & bereit',
@@ -144,6 +146,8 @@ const i18n = {
     navFaq: 'FAQ',
   },
   en: {
+    logoBonusTag: 'Referral Bonus',
+    mfrTag: 'Ship Manufacturers in the Verse',
     trust1Val: '100% free', trust1Lbl: 'no hidden costs',
     trust2Val: 'In 2 minutes', trust2Lbl: 'registered & ready',
     trust3Val: 'Official RSI link', trust3Lbl: '100% safe',
@@ -260,6 +264,8 @@ const i18n = {
     navFaq: 'FAQ',
   },
   fr: {
+    logoBonusTag: 'Bonus de Parrainage',
+    mfrTag: 'Constructeurs de Vaisseaux',
     trust1Val: '100% gratuit', trust1Lbl: 'aucun coût caché',
     trust2Val: 'En 2 minutes', trust2Lbl: 'inscrit & prêt',
     trust3Val: 'Lien RSI officiel', trust3Lbl: '100% sécurisé',
@@ -376,6 +382,8 @@ const i18n = {
     navFaq: 'FAQ',
   },
   es: {
+    logoBonusTag: 'Bono de Referido',
+    mfrTag: 'Fabricantes en el Verse',
     trust1Val: '100% gratis', trust1Lbl: 'sin costes ocultos',
     trust2Val: 'En 2 minutos', trust2Lbl: 'registrado y listo',
     trust3Val: 'Enlace RSI oficial', trust3Lbl: '100% seguro',
@@ -813,6 +821,9 @@ function renderPage() {
   ];
   const featureList = q('feature-list');
   if (featureList) featureList.innerHTML = features.map(f => `<li>${f}</li>`).join('');
+  // Logo tag + manufacturers
+  set('logo-bonus-tag', t('logoBonusTag') || 'Referral Bonus');
+  set('mfr-tag', t('mfrTag') || 'Schiffshersteller im Verse');
   // Trust bar
   for (let i = 1; i <= 4; i++) {
     set(`trust${i}-val`, t(`trust${i}Val`));

@@ -24,16 +24,16 @@
   <meta property="og:locale:alternate" content="fr_FR">
   <meta property="og:locale:alternate" content="es_ES">
 
-  <meta property="og:image" content="https://starcitizen.sth2die4.com/img/og-image.svg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image" content="https://starcitizen.sth2die4.com/img/Social/SC_05_Wallpaper_1500x500.jpg">
+  <meta property="og:image:width" content="1500">
+  <meta property="og:image:height" content="500">
   <meta property="og:image:alt" content="Star Citizen 5.000 aUEC Startbonus mit Referral-Code STAR-VJ67-N2YG">
 
   <!-- ── TWITTER CARD ── -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Star Citizen 5.000 aUEC Startbonus">
   <meta name="twitter:description" content="Starte in Star Citizen mit 5.000 aUEC Bonus! Referral-Code STAR-VJ67-N2YG – jetzt registrieren!">
-  <meta name="twitter:image" content="https://starcitizen.sth2die4.com/img/og-image.svg">
+  <meta name="twitter:image" content="https://starcitizen.sth2die4.com/img/Social/SC_05_Wallpaper_1500x500.jpg">
 
   <!-- ── STRUCTURED DATA ── -->
   <script type="application/ld+json">
@@ -151,15 +151,9 @@
   ═════════════════════════════════════════ -->
   <header class="site-header" role="banner">
     <a href="#hero" class="logo" aria-label="Star Citizen Referral – Home">
-      <div class="logo-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-        </svg>
-      </div>
-      <div class="logo-text">
-        Star Citizen
-        <span>Referral Bonus</span>
-      </div>
+      <img src="img/03_LOGOS/STARCITIZEN_HORIZONTAL_WHITE.png"
+           alt="Star Citizen" class="logo-img" loading="eager">
+      <span class="logo-bonus-tag" id="logo-bonus-tag">Referral Bonus</span>
     </a>
 
     <nav class="header-actions" role="navigation" aria-label="Language and CTA">
@@ -191,11 +185,18 @@
 
     <!-- Cinematic hero background -->
     <div class="hero-cinematic" aria-hidden="true">
-      <img src="img/hero-bg.svg" alt="" loading="eager" decoding="async">
+      <picture>
+        <source media="(max-width:768px)" srcset="img/4.0_Wallpapers/StarCitizen_4.0_Mobile_Wallpaper_01.jpg">
+        <source media="(max-width:1400px)" srcset="img/4.0_Wallpapers/StarCitizen_4.0_2k_Wallpaper_01.jpg">
+        <img src="img/4.0_Wallpapers/StarCitizen_4.0_4k_Wallpaper_01.jpg" alt="" loading="eager" decoding="async">
+      </picture>
     </div>
     <div class="hero-vignette" aria-hidden="true"></div>
 
     <div class="hero-content">
+      <img src="img/03_LOGOS/STARCITIZEN_HORIZONTAL_WHITE.png"
+           alt="Star Citizen" class="hero-game-logo" loading="eager">
+
       <div class="hero-badge" role="note">
         <span class="pulse-dot" aria-hidden="true"></span>
         <span id="hero-badge-text">Exklusiver Bonus für Neuspieler</span>
@@ -496,6 +497,51 @@
   <div class="divider" aria-hidden="true"></div>
 
   <!-- ════════════════════════════════════════
+       MANUFACTURERS STRIP
+  ═════════════════════════════════════════ -->
+  <section class="manufacturers-section" aria-label="Schiffshersteller">
+    <div class="section-inner">
+      <div class="section-tag reveal" style="justify-content:center" aria-hidden="true">
+        <span id="mfr-tag">Schiffshersteller im Verse</span>
+      </div>
+      <div class="manufacturers-strip reveal">
+        <div class="mfr-logo" title="Roberts Space Industries">
+          <img src="img/03_LOGOS/RSI_WHITE.png" alt="RSI" loading="lazy">
+        </div>
+        <div class="mfr-logo" title="Anvil Aerospace">
+          <img src="img/03_LOGOS/ANVIL_AEROSPACE_WHITE.png" alt="Anvil Aerospace" loading="lazy">
+        </div>
+        <div class="mfr-logo" title="Aegis Dynamics">
+          <img src="img/03_LOGOS/AEGIS_DYNAMICS_WHITE.png" alt="Aegis Dynamics" loading="lazy">
+        </div>
+        <div class="mfr-logo" title="Origin Jumpworks">
+          <img src="img/03_LOGOS/ORIGIN_JUMPWORKS_WHITE.png" alt="Origin Jumpworks" loading="lazy">
+        </div>
+        <div class="mfr-logo" title="Drake Interplanetary">
+          <img src="img/03_LOGOS/DRAKE_INTERPLANETARY_WHITE.png" alt="Drake Interplanetary" loading="lazy">
+        </div>
+        <div class="mfr-logo" title="MISC">
+          <img src="img/03_LOGOS/MISC_Logo_SecondaryMark_white.png" alt="MISC" loading="lazy">
+        </div>
+        <div class="mfr-logo" title="Crusader Industries">
+          <img src="img/03_LOGOS/CRUSADER_INDUSTRIES_WHITE.png" alt="Crusader Industries" loading="lazy">
+        </div>
+        <div class="mfr-logo" title="Consolidated Outland">
+          <img src="img/03_LOGOS/CONSOLIDATED_OUTLAND_WHITE.png" alt="Consolidated Outland" loading="lazy">
+        </div>
+        <div class="mfr-logo" title="Tumbril Land Systems">
+          <img src="img/03_LOGOS/TUMBRIL_WHITE.png" alt="Tumbril" loading="lazy">
+        </div>
+        <div class="mfr-logo" title="Esperia">
+          <img src="img/03_LOGOS/ESPERIA_WHITE.png" alt="Esperia" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════
        SHIP SHOWCASE
   ═════════════════════════════════════════ -->
   <section class="ships-section" id="ships" aria-labelledby="ships-title">
@@ -506,8 +552,8 @@
 
       <div class="ships-grid">
         <article class="ship-card reveal">
-          <div class="ship-visual">
-            <img src="img/ship-aurora.svg" alt="Aurora MR Starter Ship" loading="lazy" onerror="this.style.display='none'">
+          <div class="ship-visual" style="background-image:url('img/4.0_Wallpapers/StarCitizen_4.0_2k_Wallpaper_03.jpg')">
+            <img src="img/ship-aurora.svg" alt="Aurora MR Starter Ship" loading="lazy">
           </div>
           <div class="ship-info">
             <span class="ship-badge">Starter</span>
@@ -519,8 +565,8 @@
 
         <article class="ship-card reveal featured">
           <div class="ship-badge-featured">⭐ <span id="ship-featured-label">Empfohlen</span></div>
-          <div class="ship-visual">
-            <img src="img/ship-mustang.svg" alt="Mustang Alpha Starter Ship" loading="lazy" onerror="this.style.display='none'">
+          <div class="ship-visual" style="background-image:url('img/4.0_Wallpapers/StarCitizen_4.0_2k_Wallpaper_04.jpg')">
+            <img src="img/ship-mustang.svg" alt="Mustang Alpha Starter Ship" loading="lazy">
           </div>
           <div class="ship-info">
             <span class="ship-badge">Starter</span>
@@ -531,8 +577,8 @@
         </article>
 
         <article class="ship-card reveal">
-          <div class="ship-visual">
-            <img src="img/ship-avenger.svg" alt="Avenger Titan Starter Ship" loading="lazy" onerror="this.style.display='none'">
+          <div class="ship-visual" style="background-image:url('img/4.0_Wallpapers/StarCitizen_4.0_2k_Wallpaper_02.jpg')">
+            <img src="img/ship-avenger.svg" alt="Avenger Titan Starter Ship" loading="lazy">
           </div>
           <div class="ship-info">
             <span class="ship-badge">Premium</span>
@@ -560,27 +606,27 @@
 
       <div class="gallery-grid">
         <figure class="gallery-item reveal large">
-          <img src="img/gallery-1.jpg" onerror="this.onerror=null;this.src='img/gallery-fallback.svg'" alt="Star Citizen Weltraum Vista" loading="lazy">
+          <img src="img/Social/SC_05_Wallpaper_1500x500.jpg" alt="Star Citizen Weltraum Vista" loading="lazy">
           <figcaption id="gal1-cap">Endlose Weiten — über 100 Sternensysteme warten</figcaption>
         </figure>
         <figure class="gallery-item reveal">
-          <img src="img/gallery-2.jpg" onerror="this.onerror=null;this.src='img/gallery-fallback.svg'" alt="Planet Microtech" loading="lazy">
+          <img src="img/Social/SC_13_Wallpaper_1500x500.jpg" alt="Star Citizen Planet" loading="lazy">
           <figcaption id="gal2-cap">Maßstabsgetreue Planeten</figcaption>
         </figure>
         <figure class="gallery-item reveal">
-          <img src="img/gallery-3.jpg" onerror="this.onerror=null;this.src='img/gallery-fallback.svg'" alt="Cockpit View" loading="lazy">
+          <img src="img/Social/SC_20_Wallpaper_1500x500.jpg" alt="Star Citizen Cockpit" loading="lazy">
           <figcaption id="gal3-cap">First-Person Immersion</figcaption>
         </figure>
         <figure class="gallery-item reveal">
-          <img src="img/gallery-4.jpg" onerror="this.onerror=null;this.src='img/gallery-fallback.svg'" alt="Raumkampf" loading="lazy">
+          <img src="img/Social/SC_07_Wallpaper_1500x500.jpg" alt="Star Citizen Raumkampf" loading="lazy">
           <figcaption id="gal4-cap">Epische Raumkämpfe</figcaption>
         </figure>
         <figure class="gallery-item reveal large">
-          <img src="img/gallery-5.jpg" onerror="this.onerror=null;this.src='img/gallery-fallback.svg'" alt="Raumstation" loading="lazy">
+          <img src="img/Social/SC_24_Wallpaper_1500x500.jpg" alt="Star Citizen Station" loading="lazy">
           <figcaption id="gal5-cap">Pulsierende Stationen &amp; Cities</figcaption>
         </figure>
         <figure class="gallery-item reveal">
-          <img src="img/gallery-6.jpg" onerror="this.onerror=null;this.src='img/gallery-fallback.svg'" alt="Mining" loading="lazy">
+          <img src="img/Social/SC_15_Wallpaper_1500x500.jpg" alt="Star Citizen Mining" loading="lazy">
           <figcaption id="gal6-cap">Mining auf Asteroiden</figcaption>
         </figure>
       </div>
@@ -705,6 +751,10 @@
   ═════════════════════════════════════════ -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
+      <div class="footer-logos">
+        <img src="img/03_LOGOS/STARCITIZEN_HORIZONTAL_WHITE.png" alt="Star Citizen" class="footer-sc-logo" loading="lazy">
+        <img src="img/03_LOGOS/RSI_WHITE.png" alt="Roberts Space Industries" class="footer-rsi-logo" loading="lazy">
+      </div>
       <p class="footer-disclaimer" id="footer-disclaimer">
         Star Citizen ist ein eingetragenes Markenzeichen von Cloud Imperium Games. Diese Seite ist kein offizielles RSI-Produkt. Sie ist eine unabhängige Fan-Seite zur Information und Vermittlung. Beim Kauf über den Referral-Link erhält der Seitenbetreiber ggf. Ingame-Vorteile.
       </p>
