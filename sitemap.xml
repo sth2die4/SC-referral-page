@@ -2,14 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sth2die4.github.io/SC-referral-page/</loc>
+    <loc>https://starcitizen.sth2die4.com/</loc>
     <lastmod>2025-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://sth2die4.github.io/SC-referral-page/?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sth2die4.github.io/SC-referral-page/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sth2die4.github.io/SC-referral-page/?lang=fr"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sth2die4.github.io/SC-referral-page/?lang=es"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sth2die4.github.io/SC-referral-page/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://starcitizen.sth2die4.com/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://starcitizen.sth2die4.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://starcitizen.sth2die4.com/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://starcitizen.sth2die4.com/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://starcitizen.sth2die4.com/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://starcitizen.sth2die4.com/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://starcitizen.sth2die4.com/"/>
   </url>
 </urlset>

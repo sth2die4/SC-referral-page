@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sth2die4.github.io/SC-referral-page/sitemap.xml
+Sitemap: https://starcitizen.sth2die4.com/sitemap.xml

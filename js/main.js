@@ -8,6 +8,32 @@ const REFERRAL_URL  = 'https://www.robertsspaceindustries.com/enlist?referral=ST
 // ─── TRANSLATIONS ────────────────────────────────────────────────────────────
 const i18n = {
   de: {
+    // Trust Bar
+    trust1Val: '100% kostenlos', trust1Lbl: 'keine versteckten Kosten',
+    trust2Val: 'In 2 Minuten', trust2Lbl: 'registriert & bereit',
+    trust3Val: 'Offizieller RSI-Link', trust3Lbl: '100% sicher',
+    trust4Val: '5.000 aUEC', trust4Lbl: 'sofortiger In-Game Bonus',
+    // Gallery
+    galleryTag: 'Eindrücke',
+    galleryTitle: 'Erlebe das Verse',
+    galleryLead: 'Bilder aus dem Star Citizen Universum — Planeten, Schiffe, Stationen und epische Schauplätze.',
+    gal1Cap: 'Endlose Weiten — über 100 Sternensysteme warten',
+    gal2Cap: 'Maßstabsgetreue Planeten',
+    gal3Cap: 'First-Person Immersion',
+    gal4Cap: 'Epische Raumkämpfe',
+    gal5Cap: 'Pulsierende Stationen & Cities',
+    gal6Cap: 'Mining auf Asteroiden',
+    // Testimonials
+    testiTag: 'Was Spieler sagen',
+    testiTitle: 'Die Verse-Community',
+    testiLead: 'Hunderttausende von Spielern erkunden bereits das Star Citizen Universum — schließe dich ihnen an.',
+    testi1Text: '"Star Citizen ist visuell und spielerisch beeindruckend. Der Bonus war ein perfekter Einstieg für meine erste Ausrüstung."',
+    testi1Name: 'Marcus K.', testi1Role: 'Bounty Hunter · 2 Jahre im Verse',
+    testi2Text: '"Die Skalierung des Universums ist unfassbar. Echte Planeten betreten, Asteroidengürtel erkunden — nichts vergleichbares auf dem Markt."',
+    testi2Name: 'Sarah L.', testi2Role: 'Explorer · Org-Mitglied',
+    testi3Text: '"Ich habe mit dem günstigsten Starter angefangen, hab den Bonus bekommen und mir direkt In-Game ein besseres Schiff erspielt. Genau so soll das sein."',
+    testi3Name: 'Thomas B.', testi3Role: 'Trader · Neu im Verse',
+    testiDisclaim: '* Repräsentative Stimmen aus der Star Citizen Community.',
     // Loops
     loopsTag: 'Gameplay',
     loopsTitle: 'Was du im Verse machen kannst',
@@ -118,6 +144,24 @@ const i18n = {
     navFaq: 'FAQ',
   },
   en: {
+    trust1Val: '100% free', trust1Lbl: 'no hidden costs',
+    trust2Val: 'In 2 minutes', trust2Lbl: 'registered & ready',
+    trust3Val: 'Official RSI link', trust3Lbl: '100% safe',
+    trust4Val: '5,000 aUEC', trust4Lbl: 'instant in-game bonus',
+    galleryTag: 'Impressions', galleryTitle: 'Experience the Verse',
+    galleryLead: 'Images from the Star Citizen universe — planets, ships, stations and epic locations.',
+    gal1Cap: 'Endless vistas — over 100 star systems', gal2Cap: 'True-to-scale planets',
+    gal3Cap: 'First-person immersion', gal4Cap: 'Epic space combat',
+    gal5Cap: 'Pulsing stations & cities', gal6Cap: 'Asteroid mining',
+    testiTag: 'What players say', testiTitle: 'The Verse Community',
+    testiLead: 'Hundreds of thousands of players are already exploring the Star Citizen universe — join them.',
+    testi1Text: '"Star Citizen is visually and gameplay-wise stunning. The bonus was a perfect entry for my first gear."',
+    testi1Name: 'Marcus K.', testi1Role: 'Bounty Hunter · 2 years in the Verse',
+    testi2Text: '"The scale of the universe is unbelievable. Walking on real planets, exploring asteroid belts — nothing comparable on the market."',
+    testi2Name: 'Sarah L.', testi2Role: 'Explorer · Org Member',
+    testi3Text: '"I started with the cheapest starter, got the bonus and earned a better ship in-game. Exactly how it should be."',
+    testi3Name: 'Thomas B.', testi3Role: 'Trader · New in the Verse',
+    testiDisclaim: '* Representative voices from the Star Citizen community.',
     loopsTag: 'Gameplay',
     loopsTitle: 'What you can do in the Verse',
     loopsLead: 'Diverse career paths — choose your own way through the Star Citizen universe.',
@@ -216,6 +260,24 @@ const i18n = {
     navFaq: 'FAQ',
   },
   fr: {
+    trust1Val: '100% gratuit', trust1Lbl: 'aucun coût caché',
+    trust2Val: 'En 2 minutes', trust2Lbl: 'inscrit & prêt',
+    trust3Val: 'Lien RSI officiel', trust3Lbl: '100% sécurisé',
+    trust4Val: '5 000 aUEC', trust4Lbl: 'bonus instantané en jeu',
+    galleryTag: 'Aperçu', galleryTitle: 'Découvre le Verse',
+    galleryLead: "Images de l'univers Star Citizen — planètes, vaisseaux, stations et lieux épiques.",
+    gal1Cap: 'Étendues infinies — plus de 100 systèmes', gal2Cap: 'Planètes à échelle réelle',
+    gal3Cap: 'Immersion à la première personne', gal4Cap: 'Combats spatiaux épiques',
+    gal5Cap: 'Stations & villes pulsantes', gal6Cap: 'Minage sur astéroïdes',
+    testiTag: 'Avis des joueurs', testiTitle: 'La communauté du Verse',
+    testiLead: "Des centaines de milliers de joueurs explorent déjà l'univers Star Citizen — rejoins-les.",
+    testi1Text: '"Star Citizen est visuellement et techniquement impressionnant. Le bonus a été parfait pour mon premier équipement."',
+    testi1Name: 'Marcus K.', testi1Role: 'Chasseur de primes · 2 ans dans le Verse',
+    testi2Text: "\"L'échelle de l'univers est incroyable. Marcher sur de vraies planètes, explorer des astéroïdes — rien de comparable.\"",
+    testi2Name: 'Sarah L.', testi2Role: "Exploratrice · Membre d'org",
+    testi3Text: '"J\'ai commencé avec le starter le moins cher, obtenu le bonus et gagné un meilleur vaisseau en jeu. C\'est comme ça que ça doit être."',
+    testi3Name: 'Thomas B.', testi3Role: 'Trader · Nouveau dans le Verse',
+    testiDisclaim: '* Voix représentatives de la communauté Star Citizen.',
     loopsTag: 'Gameplay',
     loopsTitle: 'Ce que tu peux faire dans le Verse',
     loopsLead: "Des parcours variés — choisis ton propre chemin à travers l'univers Star Citizen.",
@@ -314,6 +376,24 @@ const i18n = {
     navFaq: 'FAQ',
   },
   es: {
+    trust1Val: '100% gratis', trust1Lbl: 'sin costes ocultos',
+    trust2Val: 'En 2 minutos', trust2Lbl: 'registrado y listo',
+    trust3Val: 'Enlace RSI oficial', trust3Lbl: '100% seguro',
+    trust4Val: '5.000 aUEC', trust4Lbl: 'bono instantáneo en el juego',
+    galleryTag: 'Impresiones', galleryTitle: 'Vive el Verse',
+    galleryLead: 'Imágenes del universo Star Citizen — planetas, naves, estaciones y lugares épicos.',
+    gal1Cap: 'Extensiones infinitas — más de 100 sistemas', gal2Cap: 'Planetas a escala real',
+    gal3Cap: 'Inmersión en primera persona', gal4Cap: 'Combates espaciales épicos',
+    gal5Cap: 'Estaciones y ciudades vibrantes', gal6Cap: 'Minería en asteroides',
+    testiTag: 'Lo que dicen los jugadores', testiTitle: 'La Comunidad del Verse',
+    testiLead: 'Cientos de miles de jugadores ya exploran el universo Star Citizen — únete a ellos.',
+    testi1Text: '"Star Citizen es visualmente y jugablemente impresionante. El bono fue una entrada perfecta para mi primer equipo."',
+    testi1Name: 'Marcus K.', testi1Role: 'Cazarrecompensas · 2 años en el Verse',
+    testi2Text: '"La escala del universo es increíble. Caminar por planetas reales, explorar asteroides — nada comparable."',
+    testi2Name: 'Sarah L.', testi2Role: 'Exploradora · Miembro de Org',
+    testi3Text: '"Empecé con el starter más barato, obtuve el bono y conseguí una nave mejor en el juego. Así debe ser."',
+    testi3Name: 'Thomas B.', testi3Role: 'Trader · Nuevo en el Verse',
+    testiDisclaim: '* Voces representativas de la comunidad de Star Citizen.',
     loopsTag: 'Jugabilidad',
     loopsTitle: 'Qué puedes hacer en el Verse',
     loopsLead: 'Diversas trayectorias profesionales — elige tu propio camino a través del universo de Star Citizen.',
@@ -412,6 +492,24 @@ const i18n = {
     navFaq: 'FAQ',
   },
   it: {
+    trust1Val: '100% gratuito', trust1Lbl: 'nessun costo nascosto',
+    trust2Val: 'In 2 minuti', trust2Lbl: 'registrato e pronto',
+    trust3Val: 'Link RSI ufficiale', trust3Lbl: '100% sicuro',
+    trust4Val: '5.000 aUEC', trust4Lbl: 'bonus in-game istantaneo',
+    galleryTag: 'Impressioni', galleryTitle: 'Vivi il Verse',
+    galleryLead: "Immagini dall'universo Star Citizen — pianeti, navi, stazioni e luoghi epici.",
+    gal1Cap: 'Distese infinite — oltre 100 sistemi stellari', gal2Cap: 'Pianeti in scala reale',
+    gal3Cap: 'Immersione in prima persona', gal4Cap: 'Combattimenti spaziali epici',
+    gal5Cap: 'Stazioni e città pulsanti', gal6Cap: 'Mining sugli asteroidi',
+    testiTag: 'Cosa dicono i giocatori', testiTitle: 'La Comunità del Verse',
+    testiLead: "Centinaia di migliaia di giocatori esplorano già l'universo Star Citizen — unisciti a loro.",
+    testi1Text: '"Star Citizen è visivamente e nel gameplay impressionante. Il bonus è stato un ingresso perfetto per il mio primo equipaggiamento."',
+    testi1Name: 'Marcus K.', testi1Role: 'Cacciatore di taglie · 2 anni nel Verse',
+    testi2Text: "\"La scala dell'universo è incredibile. Camminare su pianeti reali, esplorare cinture di asteroidi — niente di paragonabile.\"",
+    testi2Name: 'Sarah L.', testi2Role: 'Esploratrice · Membro di Org',
+    testi3Text: '"Ho iniziato con lo starter più economico, preso il bonus e guadagnato una nave migliore in-game. Esattamente come dovrebbe essere."',
+    testi3Name: 'Thomas B.', testi3Role: 'Trader · Nuovo nel Verse',
+    testiDisclaim: '* Voci rappresentative dalla comunità Star Citizen.',
     headerCta: 'Registrati ora',
     heroBadge: 'Bonus Esclusivo per Nuovi Giocatori',
     heroH1Line1: 'Inizia la tua',
@@ -510,6 +608,24 @@ const i18n = {
     navFaq: 'FAQ',
   },
   pt: {
+    trust1Val: '100% grátis', trust1Lbl: 'sem custos ocultos',
+    trust2Val: 'Em 2 minutos', trust2Lbl: 'registrado e pronto',
+    trust3Val: 'Link RSI oficial', trust3Lbl: '100% seguro',
+    trust4Val: '5.000 aUEC', trust4Lbl: 'bônus instantâneo no jogo',
+    galleryTag: 'Impressões', galleryTitle: 'Viva o Verse',
+    galleryLead: 'Imagens do universo Star Citizen — planetas, naves, estações e lugares épicos.',
+    gal1Cap: 'Extensões infinitas — mais de 100 sistemas', gal2Cap: 'Planetas em escala real',
+    gal3Cap: 'Imersão em primeira pessoa', gal4Cap: 'Combates espaciais épicos',
+    gal5Cap: 'Estações e cidades vibrantes', gal6Cap: 'Mineração em asteroides',
+    testiTag: 'O que os jogadores dizem', testiTitle: 'A Comunidade do Verse',
+    testiLead: 'Centenas de milhares de jogadores já exploram o universo Star Citizen — junte-se a eles.',
+    testi1Text: '"Star Citizen é visualmente e na jogabilidade impressionante. O bônus foi uma entrada perfeita para meu primeiro equipamento."',
+    testi1Name: 'Marcus K.', testi1Role: 'Caçador de recompensas · 2 anos no Verse',
+    testi2Text: '"A escala do universo é incrível. Andar em planetas reais, explorar cinturões de asteroides — nada comparável."',
+    testi2Name: 'Sarah L.', testi2Role: 'Exploradora · Membro de Org',
+    testi3Text: '"Comecei com o starter mais barato, obtive o bônus e ganhei uma nave melhor no jogo. Exatamente como deve ser."',
+    testi3Name: 'Thomas B.', testi3Role: 'Trader · Novo no Verse',
+    testiDisclaim: '* Vozes representativas da comunidade Star Citizen.',
     headerCta: 'Registrar agora',
     heroBadge: 'Bônus Exclusivo para Novos Jogadores',
     heroH1Line1: 'Comece sua',
@@ -697,6 +813,26 @@ function renderPage() {
   ];
   const featureList = q('feature-list');
   if (featureList) featureList.innerHTML = features.map(f => `<li>${f}</li>`).join('');
+  // Trust bar
+  for (let i = 1; i <= 4; i++) {
+    set(`trust${i}-val`, t(`trust${i}Val`));
+    set(`trust${i}-lbl`, t(`trust${i}Lbl`));
+  }
+  // Gallery
+  set('gallery-tag', t('galleryTag'));
+  set('gallery-title', t('galleryTitle'));
+  set('gallery-lead', t('galleryLead'));
+  for (let i = 1; i <= 6; i++) set(`gal${i}-cap`, t(`gal${i}Cap`));
+  // Testimonials
+  set('testi-tag', t('testiTag'));
+  set('testi-title', t('testiTitle'));
+  set('testi-lead', t('testiLead'));
+  for (let i = 1; i <= 3; i++) {
+    set(`testi${i}-text`, t(`testi${i}Text`));
+    set(`testi${i}-name`, t(`testi${i}Name`));
+    set(`testi${i}-role`, t(`testi${i}Role`));
+  }
+  set('testi-disclaim', t('testiDisclaim'));
   // Loops
   set('loops-tag', t('loopsTag'));
   set('loops-title', t('loopsTitle'));

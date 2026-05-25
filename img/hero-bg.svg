@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="90%">
+      <stop offset="0%" stop-color="#0a1c3a"/>
+      <stop offset="50%" stop-color="#050d1e"/>
+      <stop offset="100%" stop-color="#020610"/>
+    </radialGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(255,200,100,0.9)"/>
+      <stop offset="30%" stop-color="rgba(255,150,50,0.4)"/>
+      <stop offset="100%" stop-color="rgba(200,100,20,0)"/>
+    </radialGradient>
+    <radialGradient id="planetGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#4a6080"/>
+      <stop offset="50%" stop-color="#2a3850"/>
+      <stop offset="80%" stop-color="#0a1428"/>
+      <stop offset="100%" stop-color="#000"/>
+    </radialGradient>
+    <radialGradient id="atmosphere" cx="50%" cy="50%" r="55%">
+      <stop offset="80%" stop-color="rgba(100,160,220,0)"/>
+      <stop offset="92%" stop-color="rgba(100,160,220,0.3)"/>
+      <stop offset="100%" stop-color="rgba(100,160,220,0)"/>
+    </radialGradient>
+    <linearGradient id="shipBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a4a60"/>
+      <stop offset="50%" stop-color="#1a2030"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+    <linearGradient id="thrust" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="30%" stop-color="rgba(0,180,255,0.8)"/>
+      <stop offset="70%" stop-color="rgba(150,220,255,0.6)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="bigGlow"><feGaussianBlur stdDeviation="20"/></filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Distant sun glow -->
+  <circle cx="1500" cy="200" r="400" fill="url(#sun)" filter="url(#bigGlow)" opacity="0.5"/>
+  <circle cx="1500" cy="200" r="40" fill="rgba(255,220,150,1)" filter="url(#glow)"/>
+
+  <!-- Nebula clouds -->
+  <ellipse cx="300" cy="400" rx="500" ry="200" fill="rgba(0,100,200,0.12)" filter="url(#bigGlow)"/>
+  <ellipse cx="1600" cy="800" rx="600" ry="250" fill="rgba(180,60,200,0.08)" filter="url(#bigGlow)"/>
+  <ellipse cx="900" cy="100" rx="700" ry="150" fill="rgba(200,100,30,0.06)" filter="url(#bigGlow)"/>
+
+  <!-- Star field -->
+  <g fill="#e8f0f8">
+    <circle cx="120" cy="80" r="1.2" opacity="0.9"/>
+    <circle cx="280" cy="160" r="0.6" opacity="0.6"/>
+    <circle cx="450" cy="60" r="1.5" opacity="0.9"/>
+    <circle cx="620" cy="200" r="0.8" opacity="0.7"/>
+    <circle cx="780" cy="120" r="1.1" opacity="0.8"/>
+    <circle cx="950" cy="80" r="0.7" opacity="0.5"/>
+    <circle cx="1120" cy="220" r="1.3" opacity="0.9"/>
+    <circle cx="1280" cy="140" r="0.5" opacity="0.4"/>
+    <circle cx="1700" cy="80" r="1" opacity="0.7"/>
+    <circle cx="1850" cy="180" r="0.8" opacity="0.6"/>
+    <circle cx="80" cy="300" r="0.9" opacity="0.6"/>
+    <circle cx="350" cy="500" r="1.4" opacity="0.9"/>
+    <circle cx="550" cy="380" r="0.7" opacity="0.5"/>
+    <circle cx="850" cy="550" r="1.2" opacity="0.8"/>
+    <circle cx="1180" cy="450" r="0.9" opacity="0.7"/>
+    <circle cx="1450" cy="600" r="1.1" opacity="0.7"/>
+    <circle cx="1750" cy="500" r="0.8" opacity="0.6"/>
+    <circle cx="200" cy="700" r="1" opacity="0.7"/>
+    <circle cx="500" cy="850" r="1.3" opacity="0.8"/>
+    <circle cx="800" cy="900" r="0.7" opacity="0.5"/>
+    <circle cx="1100" cy="780" r="1.1" opacity="0.7"/>
+    <circle cx="1500" cy="950" r="0.9" opacity="0.6"/>
+    <circle cx="1850" cy="850" r="1.4" opacity="0.9"/>
+    <circle cx="650" cy="700" r="0.5" opacity="0.4"/>
+    <circle cx="1300" cy="850" r="0.8" opacity="0.6"/>
+  </g>
+
+  <!-- Bright stars with cross flare -->
+  <g opacity="0.8">
+    <circle cx="1300" cy="600" r="2" fill="white"/>
+    <line x1="1290" y1="600" x2="1310" y2="600" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
+    <line x1="1300" y1="590" x2="1300" y2="610" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
+  </g>
+  <g opacity="0.8">
+    <circle cx="400" cy="700" r="2" fill="white"/>
+    <line x1="390" y1="700" x2="410" y2="700" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
+    <line x1="400" y1="690" x2="400" y2="710" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
+  </g>
+
+  <!-- Big planet bottom-left -->
+  <circle cx="-100" cy="1200" r="700" fill="url(#planetGrad)"/>
+  <circle cx="-100" cy="1200" r="720" fill="url(#atmosphere)"/>
+  <!-- Planet surface details -->
+  <g opacity="0.4">
+    <ellipse cx="200" cy="800" rx="120" ry="20" fill="rgba(200,146,42,0.3)"/>
+    <ellipse cx="350" cy="900" rx="90" ry="15" fill="rgba(200,146,42,0.2)"/>
+    <ellipse cx="100" cy="950" rx="150" ry="25" fill="rgba(200,146,42,0.25)"/>
+  </g>
+  <!-- City lights on dark side -->
+  <g fill="rgba(200,180,100,0.6)">
+    <circle cx="450" cy="850" r="1"/>
+    <circle cx="470" cy="870" r="0.8"/>
+    <circle cx="490" cy="860" r="1.2"/>
+    <circle cx="510" cy="890" r="0.9"/>
+    <circle cx="530" cy="880" r="1"/>
+    <circle cx="550" cy="900" r="0.7"/>
+  </g>
+
+  <!-- Space station -->
+  <g transform="translate(1700,400)" opacity="0.5">
+    <circle r="40" fill="none" stroke="rgba(200,220,255,0.4)" stroke-width="2"/>
+    <circle r="40" fill="none" stroke="rgba(200,220,255,0.4)" stroke-width="2" transform="rotate(60)"/>
+    <circle r="40" fill="none" stroke="rgba(200,220,255,0.4)" stroke-width="2" transform="rotate(120)"/>
+    <circle r="15" fill="rgba(50,80,120,0.8)"/>
+    <circle r="3" fill="rgba(255,200,100,0.9)"/>
+  </g>
+
+  <!-- Hero ship — large detailed -->
+  <g transform="translate(960,560)">
+    <!-- Thrust trails -->
+    <ellipse cx="220" cy="0" rx="180" ry="6" fill="url(#thrust)" opacity="0.7"/>
+    <ellipse cx="220" cy="-20" rx="160" ry="4" fill="url(#thrust)" opacity="0.5"/>
+    <ellipse cx="220" cy="20" rx="160" ry="4" fill="url(#thrust)" opacity="0.5"/>
+
+    <!-- Main body -->
+    <path d="M -250,-30 L -100,-60 L 100,-50 L 180,-25 L 200,0 L 180,25 L 100,50 L -100,60 L -250,30 Z" fill="url(#shipBody)" stroke="rgba(200,146,42,0.4)" stroke-width="1.5"/>
+
+    <!-- Top hull -->
+    <path d="M -120,-55 L -50,-90 L 80,-80 L 150,-50 L 100,-45 L -100,-50 Z" fill="rgba(40,55,75,0.95)" stroke="rgba(200,146,42,0.3)" stroke-width="1"/>
+
+    <!-- Cockpit -->
+    <ellipse cx="120" cy="-15" rx="35" ry="14" fill="rgba(0,180,255,0.4)" stroke="rgba(0,200,255,0.7)" stroke-width="1"/>
+    <ellipse cx="125" cy="-18" rx="20" ry="6" fill="rgba(150,220,255,0.6)"/>
+
+    <!-- Engines -->
+    <rect x="160" y="-25" width="40" height="50" rx="5" fill="rgba(20,30,45,0.95)" stroke="rgba(200,146,42,0.5)" stroke-width="1"/>
+    <circle cx="195" cy="-15" r="6" fill="rgba(0,200,255,0.9)" filter="url(#glow)"/>
+    <circle cx="195" cy="15" r="6" fill="rgba(0,200,255,0.9)" filter="url(#glow)"/>
+
+    <!-- Wings -->
+    <polygon points="-50,-60 -150,-110 -200,-100 -120,-55" fill="rgba(35,50,70,0.95)" stroke="rgba(200,146,42,0.3)" stroke-width="1"/>
+    <polygon points="-50,60 -150,110 -200,100 -120,55" fill="rgba(35,50,70,0.95)" stroke="rgba(200,146,42,0.3)" stroke-width="1"/>
+
+    <!-- Wing engines -->
+    <ellipse cx="-180" cy="-100" rx="10" ry="5" fill="rgba(15,20,30,1)" stroke="rgba(200,146,42,0.4)" stroke-width="0.8"/>
+    <ellipse cx="-180" cy="100" rx="10" ry="5" fill="rgba(15,20,30,1)" stroke="rgba(200,146,42,0.4)" stroke-width="0.8"/>
+
+    <!-- Hull details / panel lines -->
+    <line x1="-200" y1="-20" x2="100" y2="-20" stroke="rgba(200,146,42,0.2)" stroke-width="0.5"/>
+    <line x1="-200" y1="20" x2="100" y2="20" stroke="rgba(200,146,42,0.2)" stroke-width="0.5"/>
+    <line x1="0" y1="-55" x2="0" y2="55" stroke="rgba(200,146,42,0.2)" stroke-width="0.5"/>
+    <line x1="-100" y1="-55" x2="-100" y2="55" stroke="rgba(200,146,42,0.2)" stroke-width="0.5"/>
+
+    <!-- Nav lights -->
+    <circle cx="-180" cy="-100" r="2" fill="rgba(200,146,42,1)" filter="url(#glow)"/>
+    <circle cx="-180" cy="100" r="2" fill="rgba(200,146,42,1)" filter="url(#glow)"/>
+    <circle cx="180" cy="0" r="3" fill="rgba(255,80,80,0.9)" filter="url(#glow)"/>
+
+    <!-- Underglow -->
+    <ellipse cx="0" cy="65" rx="180" ry="5" fill="rgba(0,168,232,0.2)" filter="url(#glow)"/>
+  </g>
+
+  <!-- Asteroid field foreground -->
+  <g opacity="0.5">
+    <polygon points="200,950 230,940 250,960 245,985 215,990 195,975" fill="#1a2030" stroke="rgba(200,146,42,0.3)" stroke-width="0.5"/>
+    <polygon points="1700,1000 1730,985 1760,995 1755,1020 1720,1025 1695,1010" fill="#1a2030" stroke="rgba(200,146,42,0.3)" stroke-width="0.5"/>
+    <polygon points="1400,1040 1420,1035 1440,1045 1435,1060 1415,1062 1402,1052" fill="#1a2030" stroke="rgba(200,146,42,0.3)" stroke-width="0.5"/>
+  </g>
+</svg>
