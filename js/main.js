@@ -174,6 +174,9 @@ const i18n = {
     newsLoading: 'Lade aktuelle Meldungen…',
     newsError: 'News konnten nicht geladen werden. Alle Meldungen findest du auf robertsspaceindustries.com.',
     newsAllText: 'Alle News auf RSI lesen',
+    stickyLabel: 'Referral-Code',
+    stickyCopy: 'Kopieren',
+    stickyCta: 'Jetzt registrieren',
     stickyLabel: 'Code:',
     stickyCta: 'Bonus holen',
   },
@@ -324,6 +327,9 @@ const i18n = {
     newsLoading: 'Loading latest news…',
     newsError: 'Could not load news. Find all updates at robertsspaceindustries.com.',
     newsAllText: 'Read all news on RSI',
+    stickyLabel: 'Referral Code',
+    stickyCopy: 'Copy',
+    stickyCta: 'Register now',
     stickyLabel: 'Code:',
     stickyCta: 'Claim bonus',
   },
@@ -474,6 +480,9 @@ const i18n = {
     newsLoading: 'Chargement des actualités…',
     newsError: 'Impossible de charger les actualités. Retrouvez toutes les mises à jour sur robertsspaceindustries.com.',
     newsAllText: 'Toutes les news sur RSI',
+    stickyLabel: 'Code de Parrainage',
+    stickyCopy: 'Copier',
+    stickyCta: "S'inscrire maintenant",
     stickyLabel: 'Code :',
     stickyCta: 'Obtenir le bonus',
   },
@@ -624,6 +633,9 @@ const i18n = {
     newsLoading: 'Cargando noticias…',
     newsError: 'No se pudieron cargar las noticias. Encuentra todas las actualizaciones en robertsspaceindustries.com.',
     newsAllText: 'Ver todas las noticias en RSI',
+    stickyLabel: 'Código de Referido',
+    stickyCopy: 'Copiar',
+    stickyCta: 'Registrarse ahora',
     stickyLabel: 'Código:',
     stickyCta: 'Obtener bono',
   },
@@ -772,6 +784,9 @@ const i18n = {
     newsLoading: 'Caricamento notizie…',
     newsError: 'Impossibile caricare le notizie. Trova tutti gli aggiornamenti su robertsspaceindustries.com.',
     newsAllText: 'Tutte le news su RSI',
+    stickyLabel: 'Codice Referral',
+    stickyCopy: 'Copia',
+    stickyCta: 'Registrati ora',
     stickyLabel: 'Codice:',
     stickyCta: 'Ottieni il bonus',
   },
@@ -920,6 +935,9 @@ const i18n = {
     newsLoading: 'A carregar notícias…',
     newsError: 'Não foi possível carregar as notícias. Encontra todas as atualizações em robertsspaceindustries.com.',
     newsAllText: 'Ver todas as notícias na RSI',
+    stickyLabel: 'Código de Referência',
+    stickyCopy: 'Copiar',
+    stickyCta: 'Registrar agora',
     stickyLabel: 'Código:',
     stickyCta: 'Obter bônus',
   },
@@ -1117,6 +1135,10 @@ function renderPage() {
   set('news-subtitle', t('newsSubtitle'));
   set('news-loading-text', t('newsLoading'));
   set('news-all-text', t('newsAllText'));
+  // Sticky bar
+  set('sticky-bar-label', t('stickyLabel'));
+  set('sticky-bar-btn-text', t('stickyCopy'));
+  set('sticky-bar-cta-text', t('stickyCta'));
   // Final CTA
   set('final-tag', t('finalTag'));
   set('final-title', t('finalTitle'));
@@ -1289,23 +1311,37 @@ function initHeaderScroll() {
   }, { passive: true });
 }
 
-// ─── STICKY CTA BAR ──────────────────────────────────────────────────────────
-function initStickyCta() {
-  const bar = document.getElementById('sticky-cta');
+// ─── STICKY REFERRAL BAR ─────────────────────────────────────────────────────
+function initStickyBar() {
+  const bar = document.getElementById('sticky-bar');
   const hero = document.querySelector('.hero');
   if (!bar || !hero) return;
-  const threshold = () => hero.offsetHeight * 0.6;
+  const threshold = () => hero.offsetHeight * 0.7;
   const update = () => bar.classList.toggle('visible', window.scrollY > threshold());
   update();
   window.addEventListener('scroll', update, { passive: true });
 }
 
 // ─── RSI COMM-LINK NEWS ──────────────────────────────────────────────────────
+async function fetchRsiNewsJson(rssUrl) {
+  const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&count=6`;
+  const res = await fetch(api, { signal: AbortSignal.timeout(8000) });
+  if (!res.ok) throw new Error(`rss2json ${res.status}`);
+  const data = await res.json();
+  if (data.status !== 'ok' || !data.items?.length) throw new Error('empty feed');
+  return data.items.map(item => ({
+    title: item.title || '',
+    link: item.link || '',
+    pubDate: item.pubDate || '',
+    thumbnail: item.thumbnail || item.enclosure?.link || '',
+    description: (item.description || item.content || '').replace(/<[^>]+>/g, '').trim(),
+  })).filter(i => i.title && i.link);
+}
+
 async function fetchViaProxy(url) {
   const proxies = [
     u => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
     u => `https://corsproxy.io/?${encodeURIComponent(u)}`,
-    u => `https://api.codetabs.com/v1/proxy/?quest=${encodeURIComponent(u)}`,
   ];
   for (const make of proxies) {
     try {
@@ -1341,42 +1377,57 @@ function parseRssItems(xmlText, limit = 6) {
   }).filter(i => i.title && i.link);
 }
 
+function renderNewsItems(items, grid) {
+  grid.innerHTML = '';
+  items.forEach(item => {
+    const dateObj = item.pubDate ? new Date(item.pubDate) : null;
+    const date = dateObj && !isNaN(dateObj)
+      ? dateObj.toLocaleDateString(currentLang, { day:'numeric', month:'short', year:'numeric' })
+      : '';
+    const desc = item.description ? item.description.slice(0, 130).trim() + '…' : '';
+    const linkAbs = item.link.startsWith('http')
+      ? item.link
+      : `https://robertsspaceindustries.com${item.link}`;
+    const card = document.createElement('article');
+    card.className = 'news-card reveal';
+    card.innerHTML = `
+      ${item.thumbnail ? `<div class="news-thumb" style="background-image:url('${item.thumbnail}')"></div>` : '<div class="news-thumb news-thumb--placeholder"></div>'}
+      <div class="news-body">
+        <time class="news-date">${date}</time>
+        <h3 class="news-headline">${item.title}</h3>
+        ${desc ? `<p class="news-excerpt">${desc}</p>` : ''}
+        <a href="${linkAbs}" target="_blank" rel="noopener" class="news-read-more">${t('newsReadMore')}</a>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+
 async function loadRsiNews() {
   const grid = document.getElementById('news-grid');
   const loading = document.getElementById('news-loading');
   if (!grid) return;
 
-  const feeds = [
+  const rssUrls = [
     'https://robertsspaceindustries.com/comm-link/rss/all',
+    'https://robertsspaceindustries.com/en/comm-link/rss',
     'https://robertsspaceindustries.com/comm-link/rss',
   ];
 
-  for (const feed of feeds) {
+  // Try rss2json.com first (server-side fetch, most reliable)
+  for (const rssUrl of rssUrls) {
     try {
-      const xml = await fetchViaProxy(feed);
-      const items = parseRssItems(xml, 6);
-      if (!items.length) continue;
+      const items = await fetchRsiNewsJson(rssUrl);
+      if (items.length) { renderNewsItems(items, grid); return; }
+    } catch { /* try next */ }
+  }
 
-      grid.innerHTML = '';
-      items.forEach(item => {
-        const dateObj = item.pubDate ? new Date(item.pubDate) : null;
-        const date = dateObj && !isNaN(dateObj) ? dateObj.toLocaleDateString(currentLang, { day:'numeric', month:'short', year:'numeric' }) : '';
-        const desc = item.description ? item.description.slice(0, 130).trim() + '…' : '';
-        const linkAbs = item.link.startsWith('http') ? item.link : `https://robertsspaceindustries.com${item.link}`;
-        const card = document.createElement('article');
-        card.className = 'news-card reveal';
-        card.innerHTML = `
-          ${item.thumbnail ? `<div class="news-thumb" style="background-image:url('${item.thumbnail}')"></div>` : '<div class="news-thumb news-thumb--placeholder"></div>'}
-          <div class="news-body">
-            <time class="news-date">${date}</time>
-            <h3 class="news-headline">${item.title}</h3>
-            ${desc ? `<p class="news-excerpt">${desc}</p>` : ''}
-            <a href="${linkAbs}" target="_blank" rel="noopener" class="news-read-more">${t('newsReadMore')}</a>
-          </div>`;
-        grid.appendChild(card);
-      });
-      return;
-    } catch { /* try next feed */ }
+  // Fall back to raw proxy + XML parsing
+  for (const rssUrl of rssUrls) {
+    try {
+      const xml = await fetchViaProxy(rssUrl);
+      const items = parseRssItems(xml, 6);
+      if (items.length) { renderNewsItems(items, grid); return; }
+    } catch { /* try next */ }
   }
 
   if (loading) {
@@ -1399,7 +1450,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParticles();
   initSmoothScroll();
   initHeaderScroll();
-  initStickyCta();
+  initStickyBar();
   loadRsiNews();
 });
 
