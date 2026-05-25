@@ -167,6 +167,13 @@ const i18n = {
     navHow: 'Wie es funktioniert',
     navBonus: 'Bonus',
     navFaq: 'FAQ',
+    newsTag: 'Comm-Link',
+    newsTitle: 'Aktuelle News aus dem Verse',
+    newsSubtitle: 'Offizielle Meldungen von Roberts Space Industries — immer aktuell direkt vom RSI Comm-Link.',
+    newsReadMore: 'Weiterlesen →',
+    newsLoading: 'Lade aktuelle Meldungen…',
+    newsError: 'News konnten nicht geladen werden. Alle Meldungen findest du auf robertsspaceindustries.com.',
+    newsAllText: 'Alle News auf RSI lesen',
   },
   en: {
     logoBonusTag: 'Referral Bonus',
@@ -308,6 +315,13 @@ const i18n = {
     navHow: 'How It Works',
     navBonus: 'Bonus',
     navFaq: 'FAQ',
+    newsTag: 'Comm-Link',
+    newsTitle: 'Latest News from the Verse',
+    newsSubtitle: 'Official dispatches from Roberts Space Industries — always up to date from the RSI Comm-Link.',
+    newsReadMore: 'Read more →',
+    newsLoading: 'Loading latest news…',
+    newsError: 'Could not load news. Find all updates at robertsspaceindustries.com.',
+    newsAllText: 'Read all news on RSI',
   },
   fr: {
     logoBonusTag: 'Bonus de Parrainage',
@@ -449,6 +463,13 @@ const i18n = {
     navHow: 'Comment ça marche',
     navBonus: 'Bonus',
     navFaq: 'FAQ',
+    newsTag: 'Comm-Link',
+    newsTitle: 'Actualités du Verse',
+    newsSubtitle: 'Dépêches officielles de Roberts Space Industries — toujours à jour depuis le RSI Comm-Link.',
+    newsReadMore: 'Lire la suite →',
+    newsLoading: 'Chargement des actualités…',
+    newsError: 'Impossible de charger les actualités. Retrouvez toutes les mises à jour sur robertsspaceindustries.com.',
+    newsAllText: 'Toutes les news sur RSI',
   },
   es: {
     logoBonusTag: 'Bono de Referido',
@@ -590,6 +611,13 @@ const i18n = {
     navHow: 'Cómo Funciona',
     navBonus: 'Bono',
     navFaq: 'FAQ',
+    newsTag: 'Comm-Link',
+    newsTitle: 'Últimas Noticias del Verse',
+    newsSubtitle: 'Comunicados oficiales de Roberts Space Industries — siempre actualizados desde el RSI Comm-Link.',
+    newsReadMore: 'Leer más →',
+    newsLoading: 'Cargando noticias…',
+    newsError: 'No se pudieron cargar las noticias. Encuentra todas las actualizaciones en robertsspaceindustries.com.',
+    newsAllText: 'Ver todas las noticias en RSI',
   },
   it: {
     trust1Val: '100% gratuito', trust1Lbl: 'nessun costo nascosto',
@@ -729,6 +757,13 @@ const i18n = {
     navHow: 'Come Funziona',
     navBonus: 'Bonus',
     navFaq: 'FAQ',
+    newsTag: 'Comm-Link',
+    newsTitle: 'Ultime Notizie dal Verse',
+    newsSubtitle: 'Comunicazioni ufficiali di Roberts Space Industries — sempre aggiornate dal RSI Comm-Link.',
+    newsReadMore: 'Leggi di più →',
+    newsLoading: 'Caricamento notizie…',
+    newsError: 'Impossibile caricare le notizie. Trova tutti gli aggiornamenti su robertsspaceindustries.com.',
+    newsAllText: 'Tutte le news su RSI',
   },
   pt: {
     trust1Val: '100% grátis', trust1Lbl: 'sem custos ocultos',
@@ -868,6 +903,13 @@ const i18n = {
     navHow: 'Como Funciona',
     navBonus: 'Bônus',
     navFaq: 'FAQ',
+    newsTag: 'Comm-Link',
+    newsTitle: 'Últimas Notícias do Verse',
+    newsSubtitle: 'Comunicados oficiais da Roberts Space Industries — sempre atualizados do RSI Comm-Link.',
+    newsReadMore: 'Ler mais →',
+    newsLoading: 'A carregar notícias…',
+    newsError: 'Não foi possível carregar as notícias. Encontra todas as atualizações em robertsspaceindustries.com.',
+    newsAllText: 'Ver todas as notícias na RSI',
   },
 };
 
@@ -1054,6 +1096,12 @@ function renderPage() {
       </div>
     `).join('');
   }
+  // News section
+  set('news-tag', t('newsTag'));
+  set('news-title', t('newsTitle'));
+  set('news-subtitle', t('newsSubtitle'));
+  set('news-loading-text', t('newsLoading'));
+  set('news-all-text', t('newsAllText'));
   // Final CTA
   set('final-tag', t('finalTag'));
   set('final-title', t('finalTitle'));
@@ -1226,6 +1274,47 @@ function initHeaderScroll() {
   }, { passive: true });
 }
 
+// ─── RSI COMM-LINK NEWS ──────────────────────────────────────────────────────
+async function loadRsiNews() {
+  const grid = document.getElementById('news-grid');
+  const loading = document.getElementById('news-loading');
+  if (!grid) return;
+
+  const RSS_URL = 'https://robertsspaceindustries.com/comm-link/rss/all';
+  const API = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}&count=6`;
+
+  try {
+    const res = await fetch(API, { signal: AbortSignal.timeout(8000) });
+    if (!res.ok) throw new Error('fetch failed');
+    const data = await res.json();
+    if (data.status !== 'ok' || !data.items?.length) throw new Error('no items');
+
+    grid.innerHTML = '';
+    data.items.forEach(item => {
+      const date = item.pubDate ? new Date(item.pubDate).toLocaleDateString(currentLang, { day:'numeric', month:'short', year:'numeric' }) : '';
+      const thumb = item.thumbnail || item.enclosure?.link || '';
+      const desc = item.description
+        ? item.description.replace(/<[^>]+>/g, '').slice(0, 120).trim() + '…'
+        : '';
+      const card = document.createElement('article');
+      card.className = 'news-card reveal';
+      card.innerHTML = `
+        ${thumb ? `<div class="news-thumb" style="background-image:url('${thumb}')"></div>` : '<div class="news-thumb news-thumb--placeholder"></div>'}
+        <div class="news-body">
+          <time class="news-date">${date}</time>
+          <h3 class="news-headline">${item.title || ''}</h3>
+          ${desc ? `<p class="news-excerpt">${desc}</p>` : ''}
+          <a href="${item.link}" target="_blank" rel="noopener" class="news-read-more">${t('newsReadMore')}</a>
+        </div>`;
+      grid.appendChild(card);
+    });
+  } catch {
+    if (loading) {
+      loading.innerHTML = `<span style="color:var(--text-dim);font-size:0.9rem">${t('newsError')}</span>`;
+    }
+  }
+}
+
 // ─── BOOT ────────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   renderPage();
@@ -1241,6 +1330,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParticles();
   initSmoothScroll();
   initHeaderScroll();
+  loadRsiNews();
 });
 
 // expose for inline handlers
