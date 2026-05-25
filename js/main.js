@@ -131,6 +131,29 @@ const i18n = {
     faq4A: 'Ja! Falls der Code nicht automatisch eingetragen wurde, kannst du ihn manuell eingeben. Logge dich auf der RSI-Website ein, gehe zu deinen Account-Einstellungen und trage dort STAR-VJ67-N2YG unter "Referral Code" ein — vor deinem ersten Kauf.',
     faq5Q: 'Ist Star Citizen ein fertiges Spiel?',
     faq5A: 'Star Citizen ist offiziell noch in der Alpha-Phase, ist aber schon heute umfangreich und aktiv bespielbar. Mit Version 4.0 hat das Spiel einen Meilenstein erreicht. Regelmäßige Updates erweitern das Universum kontinuierlich. Für Early Access und leidenschaftliche Gamer ist dies ein großartiger Zeitpunkt einzusteigen.',
+    faq6Q: 'Wann kommt Star Citizen raus — ist das noch Alpha?',
+    faq6A: 'Star Citizen befindet sich offiziell noch in der Alpha-Phase, ist aber schon voll spielbar. Es gibt noch kein offizielles Release-Datum für den 1.0-Release. Cloud Imperium Games veröffentlicht regelmäßig neue Patches — im Jahr 2025 ist Star Citizen so poliert wie nie zuvor.',
+    faq7Q: 'Gibt es Free-to-Play Zeiträume zum Testen?',
+    faq7A: 'Ja! RSI bietet gelegentlich kostenlose Testwochenenden (Free Fly Events) an, bei denen man das Spiel ohne Kauf ausprobieren kann. Für dauerhaften Zugang benötigst du jedoch ein Spielpaket. Über den Referral-Link bist du bei zukünftigen Events immer registriert.',
+    faq8Q: 'Kann ich das Spiel auf mehreren PCs nutzen?',
+    faq8A: 'Ja, dein RSI-Account ist an deinen Login gebunden, nicht an eine Hardware. Du kannst dich von beliebigen PCs mit deinem Konto anmelden und spielen — solange du nicht gleichzeitig auf zwei Geräten eingeloggt bist.',
+    faq9Q: 'Welche Systemanforderungen hat Star Citizen?',
+    faq9A: 'Star Citizen ist ressourcenhungrig. Empfohlen werden: CPU Intel Core i7 oder AMD Ryzen 7, 32 GB RAM, eine Nvidia RTX 3070 oder AMD RX 6700 XT oder besser, sowie eine SSD (NVMe empfohlen). Mindestanforderungen liegen bei 16 GB RAM und einer GTX 1070 — das Spielerlebnis ist dort aber eingeschränkt.',
+    faq10Q: 'Was passiert mit meinem Konto und Schiffen nach dem Release?',
+    faq10A: 'Schiffe und Pakete, die du kaufst, gehören dir dauerhaft — auch nach dem offiziellen Release von 1.0. Alpha UEC wird zwar regelmäßig zurückgesetzt, dein Schiff bleibt aber erhalten. Beim finalen Release werden alle Alpha-Fortschritte einmalig zurückgesetzt, aber deine Ausrüstung bleibt.',
+    // Guide sections
+    guideTag: 'Einsteiger Guide 2025',
+    guideTitle: 'Star Citizen starten — der komplette Guide',
+    guide1Title: 'Was ist Star Citizen — und warum jetzt?',
+    guide2Title: 'Was ist aUEC — und wofür nutzt man es?',
+    guide3Title: 'Referral Code: So funktioniert STAR-VJ67-N2YG',
+    guide2Tag: 'Für Einsteiger',
+    guide2MainTitle: 'Häufige Fragen zum Einstieg',
+    gt1Title: 'Star Citizen vs. Elite Dangerous vs. No Man\'s Sky',
+    gt2Title: 'Was ist Squadron 42?',
+    gt3Title: 'Lohnt sich der Einstieg in der Alpha?',
+    gt4Title: 'Welches Starter-Paket ist das beste für Anfänger?',
+    guideCta: 'Jetzt mit Bonus registrieren',
     // Final CTA
     finalTag: 'Bereit für das Verse?',
     finalTitle: 'Starte jetzt mit Bonus',
@@ -253,6 +276,29 @@ const i18n = {
     faq4A: 'Yes! If the code was not auto-applied, you can enter it manually. Log into the RSI website, go to your account settings and enter STAR-VJ67-N2YG under "Referral Code" — before your first purchase.',
     faq5Q: 'Is Star Citizen a finished game?',
     faq5A: 'Star Citizen is officially still in Alpha, but is already extensively playable and active. Version 4.0 marked a major milestone. Regular updates continuously expand the universe. For early access enthusiasts and passionate gamers, this is a great time to dive in.',
+    faq6Q: 'When is Star Citizen releasing — is it still Alpha?',
+    faq6A: 'Star Citizen is officially still in Alpha but is fully playable. There is no official release date for 1.0 yet. Cloud Imperium Games releases regular patches — in 2025 Star Citizen is more polished than ever.',
+    faq7Q: 'Are there free-to-play test periods?',
+    faq7A: 'Yes! RSI occasionally offers free test weekends (Free Fly Events) where you can try the game without purchasing. For permanent access you need a game package. By registering via the referral link, you\'ll be ready for future Free Fly events too.',
+    faq8Q: 'Can I play on multiple PCs?',
+    faq8A: 'Yes, your RSI account is tied to your login, not to hardware. You can log in from any PC — just not simultaneously on two devices.',
+    faq9Q: 'What are the system requirements?',
+    faq9A: 'Star Citizen is demanding. Recommended: Intel Core i7 or AMD Ryzen 7 CPU, 32 GB RAM, Nvidia RTX 3070 or AMD RX 6700 XT or better, and an SSD (NVMe recommended). Minimum specs are 16 GB RAM and GTX 1070, but the experience will be limited.',
+    faq10Q: 'What happens to my account and ships after release?',
+    faq10A: 'Ships and packages you purchase are yours permanently — even after the 1.0 release. Alpha UEC is periodically reset, but your ship remains. At final 1.0 release, Alpha progress will be wiped once, but your purchased equipment stays.',
+    // Guide sections
+    guideTag: 'Beginner Guide 2025',
+    guideTitle: 'Getting Started in Star Citizen — The Complete Guide',
+    guide1Title: 'What is Star Citizen — and why now?',
+    guide2Title: 'What is aUEC — and what do you use it for?',
+    guide3Title: 'Referral Code: How STAR-VJ67-N2YG works',
+    guide2Tag: 'For Beginners',
+    guide2MainTitle: 'Common Questions About Getting Started',
+    gt1Title: 'Star Citizen vs. Elite Dangerous vs. No Man\'s Sky',
+    gt2Title: 'What is Squadron 42?',
+    gt3Title: 'Is it worth joining in Alpha?',
+    gt4Title: 'Which starter package is best for beginners?',
+    guideCta: 'Register now with bonus',
     finalTag: 'Ready for the Verse?',
     finalTitle: 'Start Now with Bonus',
     finalSubtitle: 'Claim your starter bonus via the official registration link. It only takes 2 minutes.',
@@ -371,6 +417,29 @@ const i18n = {
     faq4A: 'Oui ! Si le code n\'a pas été appliqué automatiquement, connecte-toi au site RSI, va dans les paramètres de ton compte et entre STAR-VJ67-N2YG sous "Code de Parrainage" — avant ton premier achat.',
     faq5Q: 'Star Citizen est-il un jeu terminé ?',
     faq5A: 'Star Citizen est officiellement encore en Alpha, mais est déjà largement jouable. La version 4.0 a marqué une étape majeure. Des mises à jour régulières enrichissent continuellement l\'univers.',
+    faq6Q: 'Quand sort Star Citizen — est-ce encore en Alpha ?',
+    faq6A: 'Star Citizen est officiellement encore en Alpha mais est entièrement jouable. Il n\'y a pas encore de date de sortie officielle pour la version 1.0. Cloud Imperium Games publie régulièrement de nouveaux correctifs — en 2025, Star Citizen est plus poli que jamais.',
+    faq7Q: 'Y a-t-il des périodes d\'essai gratuites ?',
+    faq7A: 'Oui ! RSI propose occasionnellement des week-ends d\'essai gratuits (Free Fly Events) où tu peux essayer le jeu sans acheter. Pour un accès permanent, tu as besoin d\'un pack de jeu. En t\'inscrivant via le lien de parrainage, tu seras prêt pour les futurs événements Free Fly.',
+    faq8Q: 'Puis-je jouer sur plusieurs PC ?',
+    faq8A: 'Oui, ton compte RSI est lié à ton identifiant, pas à un matériel. Tu peux te connecter depuis n\'importe quel PC — mais pas simultanément sur deux appareils.',
+    faq9Q: 'Quelles sont les configurations requises ?',
+    faq9A: 'Star Citizen est exigeant. Recommandé : processeur Intel Core i7 ou AMD Ryzen 7, 32 Go de RAM, Nvidia RTX 3070 ou AMD RX 6700 XT ou mieux, et un SSD (NVMe recommandé). La configuration minimale est de 16 Go de RAM et une GTX 1070, mais l\'expérience sera limitée.',
+    faq10Q: 'Que se passe-t-il avec mon compte et mes vaisseaux après la sortie ?',
+    faq10A: 'Les vaisseaux et packs que tu achètes t\'appartiennent définitivement — même après la sortie officielle 1.0. Les aUEC Alpha sont réinitialisés périodiquement, mais ton vaisseau reste. À la sortie finale 1.0, les progrès Alpha seront effacés une fois, mais ton équipement acheté reste.',
+    // Guide sections
+    guideTag: 'Guide Débutant 2025',
+    guideTitle: 'Commencer dans Star Citizen — Le Guide Complet',
+    guide1Title: 'Qu\'est-ce que Star Citizen — et pourquoi maintenant ?',
+    guide2Title: 'Qu\'est-ce que l\'aUEC — et à quoi ça sert ?',
+    guide3Title: 'Code Parrainage : Comment fonctionne STAR-VJ67-N2YG',
+    guide2Tag: 'Pour les Débutants',
+    guide2MainTitle: 'Questions Courantes sur le Démarrage',
+    gt1Title: 'Star Citizen vs. Elite Dangerous vs. No Man\'s Sky',
+    gt2Title: 'Qu\'est-ce que Squadron 42 ?',
+    gt3Title: 'Vaut-il la peine de rejoindre en Alpha ?',
+    gt4Title: 'Quel pack starter est le meilleur pour les débutants ?',
+    guideCta: 'S\'inscrire maintenant avec le bonus',
     finalTag: 'Prêt pour le Verse ?',
     finalTitle: 'Commence Maintenant avec le Bonus',
     finalSubtitle: "Réclame ton bonus de démarrage via le lien d'inscription officiel. Ça ne prend que 2 minutes.",
@@ -489,6 +558,29 @@ const i18n = {
     faq4A: 'Sí. Si el código no se aplicó automáticamente, inicia sesión en el sitio de RSI, ve a la configuración de tu cuenta e ingresa STAR-VJ67-N2YG en "Código de Referido" — antes de tu primera compra.',
     faq5Q: '¿Es Star Citizen un juego terminado?',
     faq5A: 'Star Citizen está oficialmente en fase Alpha, pero ya es ampliamente jugable. La versión 4.0 marcó un hito importante. Actualizaciones regulares expanden el universo continuamente.',
+    faq6Q: '¿Cuándo sale Star Citizen — sigue en Alpha?',
+    faq6A: 'Star Citizen está oficialmente en Alpha pero es completamente jugable. Aún no hay fecha oficial de lanzamiento para la versión 1.0. Cloud Imperium Games publica parches regulares — en 2025, Star Citizen está más pulido que nunca.',
+    faq7Q: '¿Hay períodos de prueba gratuitos?',
+    faq7A: '¡Sí! RSI ocasionalmente ofrece fines de semana de prueba gratuitos (Free Fly Events) donde puedes probar el juego sin comprar. Para acceso permanente necesitas un paquete de juego. Al registrarte mediante el enlace de referido, estarás listo para futuros eventos Free Fly.',
+    faq8Q: '¿Puedo jugar en varios PC?',
+    faq8A: 'Sí, tu cuenta RSI está vinculada a tu inicio de sesión, no al hardware. Puedes iniciar sesión desde cualquier PC — solo no simultáneamente en dos dispositivos.',
+    faq9Q: '¿Cuáles son los requisitos del sistema?',
+    faq9A: 'Star Citizen es exigente. Recomendado: CPU Intel Core i7 o AMD Ryzen 7, 32 GB de RAM, Nvidia RTX 3070 o AMD RX 6700 XT o mejor, y un SSD (NVMe recomendado). Los requisitos mínimos son 16 GB de RAM y GTX 1070, pero la experiencia será limitada.',
+    faq10Q: '¿Qué pasa con mi cuenta y naves después del lanzamiento?',
+    faq10A: 'Las naves y paquetes que compras son tuyos permanentemente — incluso después del lanzamiento oficial 1.0. El aUEC Alpha se reinicia periódicamente, pero tu nave permanece. En el lanzamiento final 1.0, el progreso Alpha se borrará una vez, pero tu equipo comprado permanece.',
+    // Guide sections
+    guideTag: 'Guía para Principiantes 2025',
+    guideTitle: 'Empezar en Star Citizen — La Guía Completa',
+    guide1Title: '¿Qué es Star Citizen — y por qué ahora?',
+    guide2Title: '¿Qué es el aUEC — y para qué se usa?',
+    guide3Title: 'Código de Referido: Cómo funciona STAR-VJ67-N2YG',
+    guide2Tag: 'Para Principiantes',
+    guide2MainTitle: 'Preguntas Comunes Sobre el Inicio',
+    gt1Title: 'Star Citizen vs. Elite Dangerous vs. No Man\'s Sky',
+    gt2Title: '¿Qué es Squadron 42?',
+    gt3Title: '¿Vale la pena unirse en Alpha?',
+    gt4Title: '¿Qué paquete starter es mejor para principiantes?',
+    guideCta: 'Registrarse ahora con bono',
     finalTag: '¿Listo para el Verse?',
     finalTitle: 'Empieza Ahora con Bono',
     finalSubtitle: 'Consigue tu bono inicial a través del enlace de registro oficial. Solo toma 2 minutos.',
@@ -605,6 +697,29 @@ const i18n = {
     faq4A: 'Sì! Se il codice non è stato applicato automaticamente, accedi al sito RSI, vai nelle impostazioni dell\'account e inserisci STAR-VJ67-N2YG sotto "Referral Code" — prima del tuo primo acquisto.',
     faq5Q: 'Star Citizen è un gioco finito?',
     faq5A: 'Star Citizen è ufficialmente ancora in Alpha, ma è già ampiamente giocabile. La versione 4.0 ha segnato una pietra miliare. Aggiornamenti regolari espandono continuamente l\'universo.',
+    faq6Q: 'Quando esce Star Citizen — è ancora in Alpha?',
+    faq6A: 'Star Citizen è ufficialmente ancora in Alpha ma è completamente giocabile. Non c\'è ancora una data di uscita ufficiale per la versione 1.0. Cloud Imperium Games pubblica patch regolari — nel 2025 Star Citizen è più rifinito che mai.',
+    faq7Q: 'Ci sono periodi di prova gratuiti?',
+    faq7A: 'Sì! RSI offre occasionalmente week-end di prova gratuiti (Free Fly Events) dove puoi provare il gioco senza acquistarlo. Per l\'accesso permanente hai bisogno di un pacchetto di gioco. Registrandoti tramite il link referral, sarai pronto per i futuri eventi Free Fly.',
+    faq8Q: 'Posso giocare su più PC?',
+    faq8A: 'Sì, il tuo account RSI è legato al tuo login, non all\'hardware. Puoi accedere da qualsiasi PC — solo non contemporaneamente su due dispositivi.',
+    faq9Q: 'Quali sono i requisiti di sistema?',
+    faq9A: 'Star Citizen è esigente. Raccomandato: CPU Intel Core i7 o AMD Ryzen 7, 32 GB di RAM, Nvidia RTX 3070 o AMD RX 6700 XT o superiore, e un SSD (NVMe consigliato). I requisiti minimi sono 16 GB di RAM e GTX 1070, ma l\'esperienza sarà limitata.',
+    faq10Q: 'Cosa succede al mio account e alle navi dopo il rilascio?',
+    faq10A: 'Le navi e i pacchetti che acquisti sono tuoi in modo permanente — anche dopo il rilascio ufficiale 1.0. Gli aUEC Alpha vengono periodicamente azzerati, ma la tua nave rimane. Al rilascio finale 1.0, i progressi Alpha saranno azzerati una volta, ma il tuo equipaggiamento acquistato rimane.',
+    // Guide sections
+    guideTag: 'Guida per Principianti 2025',
+    guideTitle: 'Iniziare in Star Citizen — La Guida Completa',
+    guide1Title: 'Cos\'è Star Citizen — e perché ora?',
+    guide2Title: 'Cos\'è l\'aUEC — e a cosa serve?',
+    guide3Title: 'Codice Referral: Come funziona STAR-VJ67-N2YG',
+    guide2Tag: 'Per i Principianti',
+    guide2MainTitle: 'Domande Comuni sull\'Inizio',
+    gt1Title: 'Star Citizen vs. Elite Dangerous vs. No Man\'s Sky',
+    gt2Title: 'Cos\'è Squadron 42?',
+    gt3Title: 'Vale la pena entrare in Alpha?',
+    gt4Title: 'Quale pacchetto starter è il migliore per i principianti?',
+    guideCta: 'Registrati ora con bonus',
     finalTag: 'Pronto per il Verse?',
     finalTitle: 'Inizia Ora con il Bonus',
     finalSubtitle: 'Ottieni il tuo bonus starter tramite il link di registrazione ufficiale. Ci vogliono solo 2 minuti.',
@@ -721,6 +836,29 @@ const i18n = {
     faq4A: 'Sim! Se o código não foi aplicado automaticamente, faça login no site RSI, vá às configurações da conta e insira STAR-VJ67-N2YG em "Referral Code" — antes da primeira compra.',
     faq5Q: 'Star Citizen é um jogo finalizado?',
     faq5A: 'Star Citizen ainda está oficialmente em Alpha, mas já é amplamente jogável. A versão 4.0 marcou um marco importante. Atualizações regulares expandem o universo continuamente.',
+    faq6Q: 'Quando sai Star Citizen — ainda é Alpha?',
+    faq6A: 'Star Citizen está oficialmente ainda em Alpha mas é completamente jogável. Ainda não há data de lançamento oficial para a versão 1.0. A Cloud Imperium Games lança patches regulares — em 2025, Star Citizen está mais polido do que nunca.',
+    faq7Q: 'Há períodos de teste gratuitos?',
+    faq7A: 'Sim! A RSI oferece ocasionalmente fins de semana de teste gratuitos (Free Fly Events) onde você pode experimentar o jogo sem comprar. Para acesso permanente você precisa de um pacote de jogo. Ao se registrar pelo link de referência, você estará pronto para futuros eventos Free Fly.',
+    faq8Q: 'Posso jogar em vários PCs?',
+    faq8A: 'Sim, sua conta RSI está vinculada ao seu login, não ao hardware. Você pode fazer login de qualquer PC — apenas não simultaneamente em dois dispositivos.',
+    faq9Q: 'Quais são os requisitos do sistema?',
+    faq9A: 'Star Citizen é exigente. Recomendado: CPU Intel Core i7 ou AMD Ryzen 7, 32 GB de RAM, Nvidia RTX 3070 ou AMD RX 6700 XT ou melhor, e um SSD (NVMe recomendado). Os requisitos mínimos são 16 GB de RAM e GTX 1070, mas a experiência será limitada.',
+    faq10Q: 'O que acontece com minha conta e naves após o lançamento?',
+    faq10A: 'Naves e pacotes que você compra são seus permanentemente — mesmo após o lançamento oficial 1.0. O aUEC Alpha é redefinido periodicamente, mas sua nave permanece. No lançamento final 1.0, o progresso Alpha será apagado uma vez, mas seu equipamento comprado permanece.',
+    // Guide sections
+    guideTag: 'Guia para Iniciantes 2025',
+    guideTitle: 'Começar em Star Citizen — O Guia Completo',
+    guide1Title: 'O que é Star Citizen — e por que agora?',
+    guide2Title: 'O que é aUEC — e para que serve?',
+    guide3Title: 'Código de Referência: Como funciona STAR-VJ67-N2YG',
+    guide2Tag: 'Para Iniciantes',
+    guide2MainTitle: 'Perguntas Comuns Sobre o Início',
+    gt1Title: 'Star Citizen vs. Elite Dangerous vs. No Man\'s Sky',
+    gt2Title: 'O que é Squadron 42?',
+    gt3Title: 'Vale a pena entrar na Alpha?',
+    gt4Title: 'Qual pacote starter é melhor para iniciantes?',
+    guideCta: 'Registrar agora com bônus',
     finalTag: 'Pronto para o Verse?',
     finalTitle: 'Comece Agora com Bônus',
     finalSubtitle: 'Obtenha seu bônus inicial através do link de registro oficial. Leva apenas 2 minutos.',
@@ -864,6 +1002,29 @@ function renderPage() {
   set('ship3-role', t('ship3Role'));
   set('ship3-desc', t('ship3Desc'));
   set('ships-note', t('shipsNote'));
+  // Guide sections
+  set('guide-tag', t('guideTag') || 'Einsteiger Guide 2025');
+  set('guide-title', t('guideTitle') || 'Star Citizen starten — der komplette Guide');
+  set('guide1-title', t('guide1Title') || 'Was ist Star Citizen — und warum jetzt?');
+  set('guide2-title', t('guide2Title') || 'Was ist aUEC — und wofür nutzt man es?');
+  set('guide3-title', t('guide3Title') || 'Referral Code: So funktioniert STAR-VJ67-N2YG');
+  set('guide2-tag', t('guide2Tag') || 'Für Einsteiger');
+  set('guide2-main-title', t('guide2MainTitle') || 'Häufige Fragen zum Einstieg');
+  set('gt1-title', t('gt1Title') || 'Star Citizen vs. Elite Dangerous vs. No Man\'s Sky');
+  set('gt2-title', t('gt2Title') || 'Was ist Squadron 42?');
+  set('gt3-title', t('gt3Title') || 'Lohnt sich der Einstieg in der Alpha?');
+  set('gt4-title', t('gt4Title') || 'Welches Starter-Paket ist das beste für Anfänger?');
+  set('guide-cta-text', t('guideCta') || 'Jetzt mit Bonus registrieren');
+  // Body texts - only set if translation exists to not override static HTML
+  if (currentLang !== 'de') {
+    set('guide1-body', t('guide1Body') || '');
+    set('guide2-body', t('guide2Body') || '');
+    set('guide3-body', t('guide3Body') || '');
+    set('gt1-body', t('gt1Body') || '');
+    set('gt2-body', t('gt2Body') || '');
+    set('gt3-body', t('gt3Body') || '');
+    set('gt4-body', t('gt4Body') || '');
+  }
   // FAQ
   set('faq-tag', t('faqTag'));
   set('faq-title', t('faqTitle'));
@@ -873,7 +1034,12 @@ function renderPage() {
     [t('faq3Q'), t('faq3A')],
     [t('faq4Q'), t('faq4A')],
     [t('faq5Q'), t('faq5A')],
-  ];
+    [t('faq6Q'), t('faq6A')],
+    [t('faq7Q'), t('faq7A')],
+    [t('faq8Q'), t('faq8A')],
+    [t('faq9Q'), t('faq9A')],
+    [t('faq10Q'), t('faq10A')],
+  ].filter(f => f[0] && f[1]);
   const faqList = q('faq-list');
   if (faqList) {
     faqList.innerHTML = faqs.map((f, i) => `
