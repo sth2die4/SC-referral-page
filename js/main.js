@@ -68,6 +68,9 @@ const i18n = {
     headerCta: 'Jetzt registrieren',
     // Hero
     heroBadge: 'Exklusiver Bonus für Neuspieler',
+    heroBannerTag: 'Eingehende Übertragung',
+    heroBannerTitle: 'Referral-Kanal Offen',
+    heroBannerMeta: 'KANAL ·',
     heroH1Line1: 'Starte dein',
     heroH1Line2: 'Star Citizen Abenteuer',
     heroSubtitle: 'Erhalte deinen kostenlosen Startbonus und erkunde eines der ambitioniertesten Weltraumspiele aller Zeiten.',
@@ -236,6 +239,9 @@ const i18n = {
     shipsNote: '💡 Even the cheapest pack qualifies you for the full 5,000 aUEC bonus.',
     headerCta: 'Register now',
     heroBadge: 'Exclusive Bonus for New Players',
+    heroBannerTag: 'Incoming Transmission',
+    heroBannerTitle: 'Referral Channel Open',
+    heroBannerMeta: 'CH ·',
     heroH1Line1: 'Start your',
     heroH1Line2: 'Star Citizen Journey',
     heroSubtitle: 'Claim your free sign-up bonus and explore one of the most ambitious space games ever created.',
@@ -396,6 +402,9 @@ const i18n = {
     shipsNote: '💡 Même le pack le moins cher te qualifie pour le bonus complet de 5 000 aUEC.',
     headerCta: "S'inscrire maintenant",
     heroBadge: 'Bonus Exclusif pour Nouveaux Joueurs',
+    heroBannerTag: 'Transmission Entrante',
+    heroBannerTitle: 'Canal de Parrainage Ouvert',
+    heroBannerMeta: 'CH ·',
     heroH1Line1: 'Lance ton',
     heroH1Line2: 'Aventure Star Citizen',
     heroSubtitle: "Réclame ton bonus d'inscription gratuit et explore l'un des jeux spatiaux les plus ambitieux jamais créés.",
@@ -556,6 +565,9 @@ const i18n = {
     shipsNote: '💡 Incluso el paquete más barato te califica para el bono completo de 5.000 aUEC.',
     headerCta: 'Registrarse ahora',
     heroBadge: 'Bono Exclusivo para Nuevos Jugadores',
+    heroBannerTag: 'Transmisión Entrante',
+    heroBannerTitle: 'Canal de Referido Abierto',
+    heroBannerMeta: 'CH ·',
     heroH1Line1: 'Comienza tu',
     heroH1Line2: 'Aventura en Star Citizen',
     heroSubtitle: 'Consigue tu bono de registro gratuito y explora uno de los juegos espaciales más ambiciosos jamás creados.',
@@ -688,6 +700,9 @@ const i18n = {
     testiDisclaim: '* Voci rappresentative dalla comunità Star Citizen.',
     headerCta: 'Registrati ora',
     heroBadge: 'Bonus Esclusivo per Nuovi Giocatori',
+    heroBannerTag: 'Trasmissione in Arrivo',
+    heroBannerTitle: 'Canale Referral Aperto',
+    heroBannerMeta: 'CH ·',
     heroH1Line1: 'Inizia la tua',
     heroH1Line2: 'Avventura Star Citizen',
     heroSubtitle: 'Ottieni il tuo bonus di registrazione gratuito ed esplora uno dei giochi spaziali più ambiziosi mai creati.',
@@ -846,6 +861,9 @@ const i18n = {
     testiDisclaim: '* Vozes representativas da comunidade Star Citizen.',
     headerCta: 'Registrar agora',
     heroBadge: 'Bônus Exclusivo para Novos Jogadores',
+    heroBannerTag: 'Transmissão Recebida',
+    heroBannerTitle: 'Canal de Referência Aberto',
+    heroBannerMeta: 'CH ·',
     heroH1Line1: 'Comece sua',
     heroH1Line2: 'Aventura em Star Citizen',
     heroSubtitle: 'Obtenha seu bônus de registro gratuito e explore um dos jogos espaciais mais ambiciosos já criados.',
@@ -1055,6 +1073,9 @@ function renderPage() {
   // Header
   set('header-cta-text', t('headerCta'));
   // Hero
+  set('hero-banner-tag-text', t('heroBannerTag'));
+  set('hero-banner-title', t('heroBannerTitle'));
+  set('hero-banner-meta-code', t('heroBannerMeta'));
   set('hero-badge-text', t('heroBadge'));
   set('hero-h1-line1', t('heroH1Line1'));
   set('hero-h1-line2', t('heroH1Line2'));
