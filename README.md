@@ -1,10 +1,10 @@
 # Star Citizen Referral Page
 
-## [➜ starcitizen.sth2die4.com](http://starcitizen.sth2die4.com/)
+## [➜ starcitizen.sth2die4.com](https://starcitizen.sth2die4.com/)
 
 Get **UEC bonus credits** when you sign up for Star Citizen using referral code **STAR-VJ67-N2YG**.
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-starcitizen.sth2die4.com-blue?style=for-the-badge)](http://starcitizen.sth2die4.com/)
+[![Live Site](https://img.shields.io/badge/Live%20Site-starcitizen.sth2die4.com-blue?style=for-the-badge)](https://starcitizen.sth2die4.com/)
 
 ---
 
