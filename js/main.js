@@ -115,7 +115,7 @@ const i18n = {
     stat1Label: 'Spieler',
     stat2Value: '100+',
     stat2Label: 'Sternensysteme',
-    stat3Value: '4.0',
+    stat3Value: '4.8',
     stat3Label: 'Akt. Version',
     gameCta: 'Jetzt mit Bonus starten',
     // FAQ
@@ -174,6 +174,13 @@ const i18n = {
     newsLoading: 'Lade aktuelle Meldungen…',
     newsError: 'News konnten nicht geladen werden. Alle Meldungen findest du auf robertsspaceindustries.com.',
     newsAllText: 'Alle News auf RSI lesen',
+    newsReadMore: 'Weiterlesen →',
+    news1Title: 'Alpha 4.8 — Tactical Strike', news1Desc: 'Drake Ironclad, MISC Starlite, Crossbow, Plasma Grenades, Vehicle Loadout und Tactical Strike Groups. DefenseCon auf ArcCorp.',
+    news2Title: 'Alpha 4.7 — Welcome to the Rock', news2Desc: 'Breaker Stations: mehrstufige Asteroiden-Missionen, Crafting T0 und die neue Aurora Mk II mit modularem Pilotenkonzept.',
+    news3Title: 'Alpha 4.6 — Lifeline for Levski', news3Desc: 'LAMP-Nachtsicht-System, neue Levski-Missionen und umfangreiche Stabilitätsverbesserungen für das Verse.',
+    news4Title: 'Alpha 4.5 — Dawn of Engineering', news4Desc: 'Engineering-Gameplay: Schiffssysteme managen, Schäden beheben, Vulkan-Renderer-Updates und experimenteller VR-Support.',
+    news5Title: 'Alpha 4.3 — Dark Territory', news5Desc: 'Dynamischer Schnee, verbesserte Leitern aus Squadron 42 und erweiterte Wettersysteme für Planeten und Monde.',
+    news6Title: 'Alpha 4.2 — Storm Breaker', news6Desc: 'Dynamischer Regen und Radiation-Gameplay: Strahlungszonen, Schutzausrüstung und neue Umweltgefahren in Stanton.',
     stickyLabel: 'Referral-Code',
     stickyCopy: 'Kopieren',
     stickyCta: 'Jetzt registrieren',
@@ -273,7 +280,7 @@ const i18n = {
     stat1Label: 'Players',
     stat2Value: '100+',
     stat2Label: 'Star Systems',
-    stat3Value: '4.0',
+    stat3Value: '4.8',
     stat3Label: 'Cur. Version',
     gameCta: 'Claim Bonus & Register',
     faqTag: 'FAQ',
@@ -327,6 +334,13 @@ const i18n = {
     newsLoading: 'Loading latest news…',
     newsError: 'Could not load news. Find all updates at robertsspaceindustries.com.',
     newsAllText: 'Read all news on RSI',
+    newsReadMore: 'Read more →',
+    news1Title: 'Alpha 4.8 — Tactical Strike', news1Desc: 'Drake Ironclad, MISC Starlite, Crossbow, Plasma Grenades, Vehicle Loadout System and Tactical Strike Groups. DefenseCon at ArcCorp.',
+    news2Title: 'Alpha 4.7 — Welcome to the Rock', news2Desc: 'Breaker Stations: multi-stage asteroid missions, Crafting T0, and the new Aurora Mk II with a modular pilot system.',
+    news3Title: 'Alpha 4.6 — Lifeline for Levski', news3Desc: 'LAMP low-light vision system, new Levski missions, and broad stability improvements across the Verse.',
+    news4Title: 'Alpha 4.5 — Dawn of Engineering', news4Desc: 'Engineering gameplay: manage ship systems, repair damage, Vulkan renderer updates and experimental VR support.',
+    news5Title: 'Alpha 4.3 — Dark Territory', news5Desc: 'Dynamic snow, improved ladders from Squadron 42, and expanded weather systems across all planets and moons.',
+    news6Title: 'Alpha 4.2 — Storm Breaker', news6Desc: 'Dynamic rain and radiation gameplay: radiation zones, protective gear and new environmental hazards throughout Stanton.',
     stickyLabel: 'Referral Code',
     stickyCopy: 'Copy',
     stickyCta: 'Register now',
@@ -426,7 +440,7 @@ const i18n = {
     stat1Label: 'Joueurs',
     stat2Value: '100+',
     stat2Label: 'Systèmes',
-    stat3Value: '4.0',
+    stat3Value: '4.8',
     stat3Label: 'Ver. Actuelle',
     gameCta: 'Obtenir le Bonus & S\'inscrire',
     faqTag: 'Questions Fréquentes',
@@ -480,6 +494,13 @@ const i18n = {
     newsLoading: 'Chargement des actualités…',
     newsError: 'Impossible de charger les actualités. Retrouvez toutes les mises à jour sur robertsspaceindustries.com.',
     newsAllText: 'Toutes les news sur RSI',
+    newsReadMore: 'Lire la suite →',
+    news1Title: 'Alpha 4.8 — Tactical Strike', news1Desc: 'Drake Ironclad, MISC Starlite, Arbalète, Grenades Plasma, Système de Chargement et Groupes d\'Assaut Tactique. DefenseCon sur ArcCorp.',
+    news2Title: 'Alpha 4.7 — Welcome to the Rock', news2Desc: 'Stations Breaker : missions d\'astéroïdes multi-étapes, Crafting T0 et nouvelle Aurora Mk II avec système modulaire.',
+    news3Title: 'Alpha 4.6 — Lifeline for Levski', news3Desc: 'Système de vision nocturne LAMP, nouvelles missions Levski et améliorations de stabilité dans tout le Verse.',
+    news4Title: 'Alpha 4.5 — Dawn of Engineering', news4Desc: 'Gameplay d\'ingénierie : gérer les systèmes de vaisseau, réparer les dommages, mises à jour du renderer Vulkan et VR expérimental.',
+    news5Title: 'Alpha 4.3 — Dark Territory', news5Desc: 'Neige dynamique, échelles améliorées de Squadron 42 et systèmes météo étendus sur planètes et lunes.',
+    news6Title: 'Alpha 4.2 — Storm Breaker', news6Desc: 'Pluie dynamique et gameplay de radiation : zones irradiées, équipement de protection et nouveaux dangers environnementaux.',
     stickyLabel: 'Code de Parrainage',
     stickyCopy: 'Copier',
     stickyCta: "S'inscrire maintenant",
@@ -579,7 +600,7 @@ const i18n = {
     stat1Label: 'Jugadores',
     stat2Value: '100+',
     stat2Label: 'Sistemas',
-    stat3Value: '4.0',
+    stat3Value: '4.8',
     stat3Label: 'Ver. Actual',
     gameCta: 'Obtener Bono y Registrarse',
     faqTag: 'Preguntas Frecuentes',
@@ -633,6 +654,13 @@ const i18n = {
     newsLoading: 'Cargando noticias…',
     newsError: 'No se pudieron cargar las noticias. Encuentra todas las actualizaciones en robertsspaceindustries.com.',
     newsAllText: 'Ver todas las noticias en RSI',
+    newsReadMore: 'Leer más →',
+    news1Title: 'Alpha 4.8 — Tactical Strike', news1Desc: 'Drake Ironclad, MISC Starlite, Ballesta, Granadas de Plasma, Loadout Vehicular y Grupos de Asalto Táctico. DefenseCon en ArcCorp.',
+    news2Title: 'Alpha 4.7 — Welcome to the Rock', news2Desc: 'Estaciones Breaker: misiones de asteroide multi-fase, Crafting T0 y la nueva Aurora Mk II con sistema modular.',
+    news3Title: 'Alpha 4.6 — Lifeline for Levski', news3Desc: 'Sistema de visión nocturna LAMP, nuevas misiones en Levski y mejoras de estabilidad en todo el Verse.',
+    news4Title: 'Alpha 4.5 — Dawn of Engineering', news4Desc: 'Gameplay de ingeniería: gestionar sistemas de nave, reparar daños, actualizaciones del renderer Vulkan y soporte VR experimental.',
+    news5Title: 'Alpha 4.3 — Dark Territory', news5Desc: 'Nieve dinámica, escaleras mejoradas de Squadron 42 y sistemas meteorológicos extendidos en planetas y lunas.',
+    news6Title: 'Alpha 4.2 — Storm Breaker', news6Desc: 'Lluvia dinámica y gameplay de radiación: zonas de radiación, equipos de protección y nuevos peligros ambientales en Stanton.',
     stickyLabel: 'Código de Referido',
     stickyCopy: 'Copiar',
     stickyCta: 'Registrarse ahora',
@@ -704,7 +732,7 @@ const i18n = {
     stat1Label: 'Giocatori',
     stat2Value: '100+',
     stat2Label: 'Sistemi Stellari',
-    stat3Value: '4.0',
+    stat3Value: '4.8',
     stat3Label: 'Ver. Attuale',
     gameCta: 'Ottieni Bonus e Registrati',
     loopsTag: 'Gameplay',
@@ -784,6 +812,13 @@ const i18n = {
     newsLoading: 'Caricamento notizie…',
     newsError: 'Impossibile caricare le notizie. Trova tutti gli aggiornamenti su robertsspaceindustries.com.',
     newsAllText: 'Tutte le news su RSI',
+    newsReadMore: 'Leggi di più →',
+    news1Title: 'Alpha 4.8 — Tactical Strike', news1Desc: 'Drake Ironclad, MISC Starlite, Balestra, Granate al Plasma, Sistema di Loadout e Gruppi d\'Assalto Tattico. DefenseCon su ArcCorp.',
+    news2Title: 'Alpha 4.7 — Welcome to the Rock', news2Desc: 'Stazioni Breaker: missioni asteroide multi-fase, Crafting T0 e nuova Aurora Mk II con sistema modulare per piloti.',
+    news3Title: 'Alpha 4.6 — Lifeline for Levski', news3Desc: 'Sistema di visione notturna LAMP, nuove missioni a Levski e ampie migliorie di stabilità nel Verse.',
+    news4Title: 'Alpha 4.5 — Dawn of Engineering', news4Desc: 'Gameplay ingegneristico: gestire sistemi nave, riparare danni, aggiornamenti renderer Vulkan e supporto VR sperimentale.',
+    news5Title: 'Alpha 4.3 — Dark Territory', news5Desc: 'Neve dinamica, scale migliorate da Squadron 42 e sistemi meteorologici estesi su pianeti e lune.',
+    news6Title: 'Alpha 4.2 — Storm Breaker', news6Desc: 'Pioggia dinamica e gameplay con radiazioni: zone irradiate, equipaggiamento protettivo e nuovi pericoli ambientali in Stanton.',
     stickyLabel: 'Codice Referral',
     stickyCopy: 'Copia',
     stickyCta: 'Registrati ora',
@@ -855,7 +890,7 @@ const i18n = {
     stat1Label: 'Jogadores',
     stat2Value: '100+',
     stat2Label: 'Sistemas',
-    stat3Value: '4.0',
+    stat3Value: '4.8',
     stat3Label: 'Ver. Atual',
     gameCta: 'Obter Bônus e Registrar',
     loopsTag: 'Jogabilidade',
@@ -935,6 +970,13 @@ const i18n = {
     newsLoading: 'A carregar notícias…',
     newsError: 'Não foi possível carregar as notícias. Encontra todas as atualizações em robertsspaceindustries.com.',
     newsAllText: 'Ver todas as notícias na RSI',
+    newsReadMore: 'Ler mais →',
+    news1Title: 'Alpha 4.8 — Tactical Strike', news1Desc: 'Drake Ironclad, MISC Starlite, Besta, Granadas de Plasma, Sistema de Loadout e Grupos de Assalto Tático. DefenseCon em ArcCorp.',
+    news2Title: 'Alpha 4.7 — Welcome to the Rock', news2Desc: 'Estações Breaker: missões de asteroide multi-fase, Crafting T0 e nova Aurora Mk II com sistema modular para pilotos.',
+    news3Title: 'Alpha 4.6 — Lifeline for Levski', news3Desc: 'Sistema de visão noturna LAMP, novas missões em Levski e amplas melhorias de estabilidade no Verse.',
+    news4Title: 'Alpha 4.5 — Dawn of Engineering', news4Desc: 'Gameplay de engenharia: gerir sistemas da nave, reparar danos, atualizações do renderer Vulkan e suporte a VR experimental.',
+    news5Title: 'Alpha 4.3 — Dark Territory', news5Desc: 'Neve dinâmica, escadas melhoradas do Squadron 42 e sistemas meteorológicos expandidos em planetas e luas.',
+    news6Title: 'Alpha 4.2 — Storm Breaker', news6Desc: 'Chuva dinâmica e gameplay de radiação: zonas de radiação, equipamento de proteção e novos perigos ambientais em Stanton.',
     stickyLabel: 'Código de Referência',
     stickyCopy: 'Copiar',
     stickyCta: 'Registrar agora',
@@ -962,9 +1004,43 @@ function setLanguage(lang) {
   currentLang = lang;
   localStorage.setItem('sc_lang', lang);
   renderPage();
-  document.querySelectorAll('.lang-btn').forEach(btn => {
+  updateLangDropdown(lang);
+}
+
+function updateLangDropdown(lang) {
+  const label = document.getElementById('lang-current-label');
+  if (label) label.textContent = lang.toUpperCase();
+  document.querySelectorAll('.lang-option').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+}
+
+function initLangDropdown() {
+  const dropdown = document.getElementById('lang-dropdown');
+  const btn      = document.getElementById('lang-drop-btn');
+  const menu     = document.getElementById('lang-drop-menu');
+  if (!dropdown || !btn || !menu) return;
+
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    dropdown.classList.toggle('open');
+    btn.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+  });
+
+  menu.querySelectorAll('.lang-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      setLanguage(opt.dataset.lang);
+      dropdown.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('click', () => {
+    dropdown.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  });
+
+  updateLangDropdown(currentLang);
 }
 
 // ─── RENDER ──────────────────────────────────────────────────────────────────
@@ -1133,8 +1209,13 @@ function renderPage() {
   set('news-tag', t('newsTag'));
   set('news-title', t('newsTitle'));
   set('news-subtitle', t('newsSubtitle'));
-  set('news-loading-text', t('newsLoading'));
   set('news-all-text', t('newsAllText'));
+  // Static news card i18n
+  ['news1','news2','news3','news4','news5','news6'].forEach(k => {
+    set(`${k}-title`, t(`${k}Title`));
+    set(`${k}-desc`,  t(`${k}Desc`));
+  });
+  document.querySelectorAll('.news-read-more').forEach(el => { el.textContent = t('newsReadMore'); });
   // Sticky bar
   set('sticky-bar-label', t('stickyLabel'));
   set('sticky-bar-btn-text', t('stickyCopy'));
@@ -1439,11 +1520,7 @@ async function loadRsiNews() {
 document.addEventListener('DOMContentLoaded', () => {
   renderPage();
 
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
-    btn.classList.toggle('active', btn.dataset.lang === currentLang);
-  });
-
+  initLangDropdown();
   initStarfield();
   initScrollReveal();
   initParallax();
@@ -1451,7 +1528,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initHeaderScroll();
   initStickyBar();
-  loadRsiNews();
 });
 
 // expose for inline handlers

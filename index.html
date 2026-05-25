@@ -155,7 +155,7 @@
         "name": "Wann erscheint Star Citizen Version 1.0?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Es gibt kein offizielles Release-Datum für Star Citizen 1.0. Das Spiel befindet sich in der Alpha-Phase, ist aber bereits vollständig spielbar. Version 4.0 (2025) markiert den bisher ausgereiftesten Stand der Entwicklung."
+          "text": "Es gibt kein offizielles Release-Datum für Star Citizen 1.0. Das Spiel befindet sich in der Alpha-Phase, ist aber bereits vollständig spielbar. Version 4.8 (2026) markiert den bisher ausgereiftesten Stand der Entwicklung."
         }
       }
     ]
@@ -257,13 +257,21 @@
     </a>
 
     <nav class="header-actions" role="navigation" aria-label="Language and CTA">
-      <div class="lang-switcher" role="group" aria-label="Language selection">
-        <button class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
-        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
-        <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
-        <button class="lang-btn" data-lang="es" aria-label="Español">ES</button>
-        <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
-        <button class="lang-btn" data-lang="pt" aria-label="Português">PT</button>
+      <!-- Language Dropdown -->
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button class="lang-drop-btn" id="lang-drop-btn" aria-haspopup="listbox" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+          <span id="lang-current-label">DE</span>
+          <svg class="lang-chevron" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-drop-menu" id="lang-drop-menu" role="listbox" aria-label="Language">
+          <button class="lang-option" data-lang="de" role="option">DE — Deutsch</button>
+          <button class="lang-option" data-lang="en" role="option">EN — English</button>
+          <button class="lang-option" data-lang="fr" role="option">FR — Français</button>
+          <button class="lang-option" data-lang="es" role="option">ES — Español</button>
+          <button class="lang-option" data-lang="it" role="option">IT — Italiano</button>
+          <button class="lang-option" data-lang="pt" role="option">PT — Português</button>
+        </div>
       </div>
       <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-VJ67-N2YG"
          class="header-cta referral-link"
@@ -814,7 +822,7 @@
           <h3 id="guide1-title">Was ist Star Citizen — und warum jetzt?</h3>
           <div class="guide-block-body" id="guide1-body">
             <p>Star Citizen ist mehr als ein Spiel — es ist ein lebendiges, persistentes Universum, das sich ständig weiterentwickelt. Entwickelt von Cloud Imperium Games unter der Leitung von Chris Roberts (bekannt aus Wing Commander), hat Star Citizen die Grenzen dessen, was in einem Weltraumspiel möglich ist, immer wieder neu definiert.</p>
-            <p>Mit <strong>Version 4.0</strong> hat das Spiel einen Meilenstein erreicht: Mehrsystem-Reisen, massiv verbessertes Server-Meshing und eine Dichte an Content, die das Spiel heute schon für hunderte Stunden Spielzeit sorgt — trotz laufender Entwicklung.</p>
+            <p>Mit <strong>Version 4.8</strong> hat das Spiel einen Meilenstein erreicht: Mehrsystem-Reisen, massiv verbessertes Server-Meshing und eine Dichte an Content, die das Spiel heute schon für hunderte Stunden Spielzeit sorgt — trotz laufender Entwicklung.</p>
             <p>Wer jetzt einsteigt, profitiert von der besten Version, die Star Citizen je hatte, und kann noch günstig dabei sein, bevor der finale Release die Preise anhebt.</p>
           </div>
         </article>
@@ -860,7 +868,7 @@
         </div>
         <div class="guide-text-block">
           <h3 id="gt3-title">Lohnt sich der Einstieg in der Alpha?</h3>
-          <p id="gt3-body">Ja — und zwar besonders jetzt. Star Citizen 4.0 ist die stabilste und inhaltsreichste Version, die je erschienen ist. Das Spiel bietet schon heute <strong>hunderte Spielstunden</strong> mit Handel, Missionen, Dogfighting, Mining und Erkundung. Außerdem wächst die Community weiterhin stark, und Früh-Einsteiger können sich jetzt zum günstigsten Preis einsteigen — vor einem möglichen Release-Preisanstieg.</p>
+          <p id="gt3-body">Ja — und zwar besonders jetzt. Star Citizen 4.8 ist die stabilste und inhaltsreichste Version, die je erschienen ist. Das Spiel bietet schon heute <strong>hunderte Spielstunden</strong> mit Handel, Missionen, Dogfighting, Mining und Erkundung. Außerdem wächst die Community weiterhin stark, und Früh-Einsteiger können sich jetzt zum günstigsten Preis einsteigen — vor einem möglichen Release-Preisanstieg.</p>
         </div>
         <div class="guide-text-block">
           <h3 id="gt4-title">Welches Starter-Paket ist das beste für Anfänger?</h3>
@@ -885,20 +893,77 @@
        RSI NEWS / COMM-LINK
   ═════════════════════════════════════════ -->
   <section id="rsi-news" class="news-section" aria-labelledby="news-title">
-    <div class="container">
+    <div class="section-inner">
       <div class="section-tag reveal" aria-hidden="true">
         <span id="news-tag">Comm-Link</span>
       </div>
       <h2 class="section-title reveal" id="news-title"></h2>
       <p class="section-lead reveal" id="news-subtitle"></p>
-      <div class="news-grid reveal" id="news-grid">
-        <div class="news-loading" id="news-loading">
-          <span class="news-spinner"></span>
-          <span id="news-loading-text">Lade aktuelle Meldungen…</span>
-        </div>
+      <div class="news-grid" id="news-grid">
+
+        <article class="news-card reveal">
+          <div class="news-thumb" style="background-image:url('img/4.0_Wallpapers/StarCitizen_4.0_2k_Wallpaper_02.jpg')"></div>
+          <div class="news-body">
+            <time class="news-date">14. Mai 2026</time>
+            <h3 class="news-headline" id="news1-title">Alpha 4.8 — Tactical Strike</h3>
+            <p class="news-excerpt" id="news1-desc">Drake Ironclad, MISC Starlite, Crossbow, Plasma Grenades, Vehicle Loadout System und Tactical Strike Groups. DefenseCon auf ArcCorp.</p>
+            <a href="https://robertsspaceindustries.com/en/comm-link/Patch-Notes/21168-Star-Citizen-Alpha-48" target="_blank" rel="noopener" class="news-read-more" id="news-readmore-label">Weiterlesen →</a>
+          </div>
+        </article>
+
+        <article class="news-card reveal">
+          <div class="news-thumb" style="background-image:url('img/4.0_Wallpapers/StarCitizen_4.0_2k_Wallpaper_04.jpg')"></div>
+          <div class="news-body">
+            <time class="news-date">26. März 2026</time>
+            <h3 class="news-headline" id="news2-title">Alpha 4.7 — Welcome to the Rock</h3>
+            <p class="news-excerpt" id="news2-desc">Breaker Stations: mehrstufige Asteroiden-Missionen, Crafting T0 und die neue Aurora Mk II mit modularem System für Piloten.</p>
+            <a href="https://robertsspaceindustries.com/en/comm-link/Patch-Notes/21085-Star-Citizen-Alpha-47" target="_blank" rel="noopener" class="news-read-more">Weiterlesen →</a>
+          </div>
+        </article>
+
+        <article class="news-card reveal">
+          <div class="news-thumb" style="background-image:url('img/4.0_Wallpapers/StarCitizen_4.0_2k_Wallpaper_01.jpg')"></div>
+          <div class="news-body">
+            <time class="news-date">28. Jan. 2026</time>
+            <h3 class="news-headline" id="news3-title">Alpha 4.6 — Lifeline for Levski</h3>
+            <p class="news-excerpt" id="news3-desc">LAMP-System für Nachtsicht, neue Missionen rund um Levski und umfangreiche Stabilitätsverbesserungen für das Verse.</p>
+            <a href="https://robertsspaceindustries.com/en/comm-link/Patch-Notes/21003-Star-Citizen-Alpha-46" target="_blank" rel="noopener" class="news-read-more">Weiterlesen →</a>
+          </div>
+        </article>
+
+        <article class="news-card reveal">
+          <div class="news-thumb" style="background-image:url('img/Social/SC_20_Wallpaper_1500x500.jpg')"></div>
+          <div class="news-body">
+            <time class="news-date">17. Dez. 2025</time>
+            <h3 class="news-headline" id="news4-title">Alpha 4.5 — Dawn of Engineering</h3>
+            <p class="news-excerpt" id="news4-desc">Engineering-Gameplay: Schiffssysteme managen, Schäden beheben, Vulkan-Renderer-Verbesserungen und experimenteller VR-Support.</p>
+            <a href="https://robertsspaceindustries.com/en/comm-link/Patch-Notes/20899-Star-Citizen-Alpha-45" target="_blank" rel="noopener" class="news-read-more">Weiterlesen →</a>
+          </div>
+        </article>
+
+        <article class="news-card reveal">
+          <div class="news-thumb" style="background-image:url('img/Social/SC_07_Wallpaper_1500x500.jpg')"></div>
+          <div class="news-body">
+            <time class="news-date">16. Aug. 2025</time>
+            <h3 class="news-headline" id="news5-title">Alpha 4.3 — Dark Territory</h3>
+            <p class="news-excerpt" id="news5-desc">Dynamischer Schnee, verbesserte Leitern aus Squadron 42 und erweiterte Wettersysteme für alle Planeten und Monde.</p>
+            <a href="https://robertsspaceindustries.com/en/comm-link/Patch-Notes/20714-Star-Citizen-Alpha-43" target="_blank" rel="noopener" class="news-read-more">Weiterlesen →</a>
+          </div>
+        </article>
+
+        <article class="news-card reveal">
+          <div class="news-thumb" style="background-image:url('img/Social/SC_24_Wallpaper_1500x500.jpg')"></div>
+          <div class="news-body">
+            <time class="news-date">19. Juni 2025</time>
+            <h3 class="news-headline" id="news6-title">Alpha 4.2 — Storm Breaker</h3>
+            <p class="news-excerpt" id="news6-desc">Dynamischer Regen und Radiation-Gameplay: Strahlungszonen, Schutzausrüstung und neue Umweltgefahren in ganz Stanton.</p>
+            <a href="https://robertsspaceindustries.com/en/comm-link/Patch-Notes/20609-Star-Citizen-Alpha-42" target="_blank" rel="noopener" class="news-read-more">Weiterlesen →</a>
+          </div>
+        </article>
+
       </div>
       <div class="news-footer reveal">
-        <a href="https://robertsspaceindustries.com/en/comm-link" target="_blank" rel="noopener" class="btn-ghost" id="news-all-link">
+        <a href="https://robertsspaceindustries.com/en/comm-link" target="_blank" rel="noopener" class="btn-ghost">
           <span id="news-all-text">Alle News auf RSI lesen</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
         </a>
