@@ -174,6 +174,8 @@ const i18n = {
     newsLoading: 'Lade aktuelle Meldungen…',
     newsError: 'News konnten nicht geladen werden. Alle Meldungen findest du auf robertsspaceindustries.com.',
     newsAllText: 'Alle News auf RSI lesen',
+    stickyLabel: 'Code:',
+    stickyCta: 'Bonus holen',
   },
   en: {
     logoBonusTag: 'Referral Bonus',
@@ -322,6 +324,8 @@ const i18n = {
     newsLoading: 'Loading latest news…',
     newsError: 'Could not load news. Find all updates at robertsspaceindustries.com.',
     newsAllText: 'Read all news on RSI',
+    stickyLabel: 'Code:',
+    stickyCta: 'Claim bonus',
   },
   fr: {
     logoBonusTag: 'Bonus de Parrainage',
@@ -470,6 +474,8 @@ const i18n = {
     newsLoading: 'Chargement des actualités…',
     newsError: 'Impossible de charger les actualités. Retrouvez toutes les mises à jour sur robertsspaceindustries.com.',
     newsAllText: 'Toutes les news sur RSI',
+    stickyLabel: 'Code :',
+    stickyCta: 'Obtenir le bonus',
   },
   es: {
     logoBonusTag: 'Bono de Referido',
@@ -618,6 +624,8 @@ const i18n = {
     newsLoading: 'Cargando noticias…',
     newsError: 'No se pudieron cargar las noticias. Encuentra todas las actualizaciones en robertsspaceindustries.com.',
     newsAllText: 'Ver todas las noticias en RSI',
+    stickyLabel: 'Código:',
+    stickyCta: 'Obtener bono',
   },
   it: {
     trust1Val: '100% gratuito', trust1Lbl: 'nessun costo nascosto',
@@ -764,6 +772,8 @@ const i18n = {
     newsLoading: 'Caricamento notizie…',
     newsError: 'Impossibile caricare le notizie. Trova tutti gli aggiornamenti su robertsspaceindustries.com.',
     newsAllText: 'Tutte le news su RSI',
+    stickyLabel: 'Codice:',
+    stickyCta: 'Ottieni il bonus',
   },
   pt: {
     trust1Val: '100% grátis', trust1Lbl: 'sem custos ocultos',
@@ -910,6 +920,8 @@ const i18n = {
     newsLoading: 'A carregar notícias…',
     newsError: 'Não foi possível carregar as notícias. Encontra todas as atualizações em robertsspaceindustries.com.',
     newsAllText: 'Ver todas as notícias na RSI',
+    stickyLabel: 'Código:',
+    stickyCta: 'Obter bônus',
   },
 };
 
@@ -1096,6 +1108,9 @@ function renderPage() {
       </div>
     `).join('');
   }
+  // Sticky CTA bar
+  set('sticky-cta-label', t('stickyLabel'));
+  set('sticky-cta-btn-text', t('stickyCta'));
   // News section
   set('news-tag', t('newsTag'));
   set('news-title', t('newsTitle'));
@@ -1274,44 +1289,98 @@ function initHeaderScroll() {
   }, { passive: true });
 }
 
+// ─── STICKY CTA BAR ──────────────────────────────────────────────────────────
+function initStickyCta() {
+  const bar = document.getElementById('sticky-cta');
+  const hero = document.querySelector('.hero');
+  if (!bar || !hero) return;
+  const threshold = () => hero.offsetHeight * 0.6;
+  const update = () => bar.classList.toggle('visible', window.scrollY > threshold());
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+}
+
 // ─── RSI COMM-LINK NEWS ──────────────────────────────────────────────────────
+async function fetchViaProxy(url) {
+  const proxies = [
+    u => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
+    u => `https://corsproxy.io/?${encodeURIComponent(u)}`,
+    u => `https://api.codetabs.com/v1/proxy/?quest=${encodeURIComponent(u)}`,
+  ];
+  for (const make of proxies) {
+    try {
+      const res = await fetch(make(url), { signal: AbortSignal.timeout(7000) });
+      if (!res.ok) continue;
+      const text = await res.text();
+      if (text && text.length > 200) return text;
+    } catch { /* try next */ }
+  }
+  throw new Error('all proxies failed');
+}
+
+function parseRssItems(xmlText, limit = 6) {
+  const doc = new DOMParser().parseFromString(xmlText, 'text/xml');
+  const items = [...doc.querySelectorAll('item, entry')].slice(0, limit);
+  return items.map(it => {
+    const get = sel => it.querySelector(sel)?.textContent?.trim() || '';
+    let link = get('link');
+    if (!link) link = it.querySelector('link')?.getAttribute('href') || '';
+    const descRaw = get('description') || get('summary') || get('content\\:encoded') || '';
+    const imgMatch = descRaw.match(/<img[^>]+src=["']([^"']+)["']/i);
+    const mediaUrl = it.querySelector('enclosure')?.getAttribute('url')
+      || it.querySelector('media\\:content, content[medium="image"]')?.getAttribute('url')
+      || it.querySelector('media\\:thumbnail')?.getAttribute('url')
+      || '';
+    return {
+      title: get('title'),
+      link,
+      pubDate: get('pubDate') || get('published') || get('updated'),
+      thumbnail: mediaUrl || (imgMatch ? imgMatch[1] : ''),
+      description: descRaw.replace(/<[^>]+>/g, '').trim(),
+    };
+  }).filter(i => i.title && i.link);
+}
+
 async function loadRsiNews() {
   const grid = document.getElementById('news-grid');
   const loading = document.getElementById('news-loading');
   if (!grid) return;
 
-  const RSS_URL = 'https://robertsspaceindustries.com/comm-link/rss/all';
-  const API = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}&count=6`;
+  const feeds = [
+    'https://robertsspaceindustries.com/comm-link/rss/all',
+    'https://robertsspaceindustries.com/comm-link/rss',
+  ];
 
-  try {
-    const res = await fetch(API, { signal: AbortSignal.timeout(8000) });
-    if (!res.ok) throw new Error('fetch failed');
-    const data = await res.json();
-    if (data.status !== 'ok' || !data.items?.length) throw new Error('no items');
+  for (const feed of feeds) {
+    try {
+      const xml = await fetchViaProxy(feed);
+      const items = parseRssItems(xml, 6);
+      if (!items.length) continue;
 
-    grid.innerHTML = '';
-    data.items.forEach(item => {
-      const date = item.pubDate ? new Date(item.pubDate).toLocaleDateString(currentLang, { day:'numeric', month:'short', year:'numeric' }) : '';
-      const thumb = item.thumbnail || item.enclosure?.link || '';
-      const desc = item.description
-        ? item.description.replace(/<[^>]+>/g, '').slice(0, 120).trim() + '…'
-        : '';
-      const card = document.createElement('article');
-      card.className = 'news-card reveal';
-      card.innerHTML = `
-        ${thumb ? `<div class="news-thumb" style="background-image:url('${thumb}')"></div>` : '<div class="news-thumb news-thumb--placeholder"></div>'}
-        <div class="news-body">
-          <time class="news-date">${date}</time>
-          <h3 class="news-headline">${item.title || ''}</h3>
-          ${desc ? `<p class="news-excerpt">${desc}</p>` : ''}
-          <a href="${item.link}" target="_blank" rel="noopener" class="news-read-more">${t('newsReadMore')}</a>
-        </div>`;
-      grid.appendChild(card);
-    });
-  } catch {
-    if (loading) {
-      loading.innerHTML = `<span style="color:var(--text-dim);font-size:0.9rem">${t('newsError')}</span>`;
-    }
+      grid.innerHTML = '';
+      items.forEach(item => {
+        const dateObj = item.pubDate ? new Date(item.pubDate) : null;
+        const date = dateObj && !isNaN(dateObj) ? dateObj.toLocaleDateString(currentLang, { day:'numeric', month:'short', year:'numeric' }) : '';
+        const desc = item.description ? item.description.slice(0, 130).trim() + '…' : '';
+        const linkAbs = item.link.startsWith('http') ? item.link : `https://robertsspaceindustries.com${item.link}`;
+        const card = document.createElement('article');
+        card.className = 'news-card reveal';
+        card.innerHTML = `
+          ${item.thumbnail ? `<div class="news-thumb" style="background-image:url('${item.thumbnail}')"></div>` : '<div class="news-thumb news-thumb--placeholder"></div>'}
+          <div class="news-body">
+            <time class="news-date">${date}</time>
+            <h3 class="news-headline">${item.title}</h3>
+            ${desc ? `<p class="news-excerpt">${desc}</p>` : ''}
+            <a href="${linkAbs}" target="_blank" rel="noopener" class="news-read-more">${t('newsReadMore')}</a>
+          </div>`;
+        grid.appendChild(card);
+      });
+      return;
+    } catch { /* try next feed */ }
+  }
+
+  if (loading) {
+    loading.innerHTML = `<span style="color:var(--text-dim);font-size:0.9rem">${t('newsError')}</span>`;
   }
 }
 
@@ -1330,6 +1399,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParticles();
   initSmoothScroll();
   initHeaderScroll();
+  initStickyCta();
   loadRsiNews();
 });
 
