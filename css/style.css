@@ -2089,3 +2089,19 @@ body { padding-bottom: 56px; }
   .sticky-bar-copy span { display: none; }
   .sticky-bar-cta { padding: 0.3rem 0.5rem; }
 }
+
+/* ── SC NEWS (Schwesterseite) ── */
+.scnews-band { padding: 0 2rem 1.5rem; position: relative; z-index: 2; }
+.scnews-band-inner { max-width: 1100px; margin: 1.5rem auto 0; display: flex; align-items: center; gap: 1rem; text-decoration: none;
+  padding: 1rem 1.25rem; border: 1px solid rgba(200,146,42,.35); border-left: 3px solid var(--gold); border-radius: 0 var(--radius) var(--radius) 0;
+  background: rgba(10,22,40,.75); color: var(--text); transition: border-color .2s, transform .2s; }
+.scnews-band-inner:hover { border-color: var(--gold-light); transform: translateY(-2px); }
+.scnews-band-tag { font-family: 'Orbitron', sans-serif; font-weight: 900; letter-spacing: .12em; color: var(--white); white-space: nowrap; }
+.scnews-band-text { display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
+.scnews-band-text strong { color: var(--gold-light); font-weight: 600; }
+.scnews-band-text span { font-size: .85rem; color: var(--text-dim); }
+.scnews-band-pfeil { margin-left: auto; font-size: 1.4rem; color: var(--gold); }
+.scnews-mehr { text-align: center; margin-top: 2rem; font-size: .95rem; }
+.scnews-mehr a, .footer-scnews a { color: var(--gold-light); }
+.footer-scnews { font-size: .8rem; }
+@media (max-width: 680px) { .scnews-band { padding: 0 1rem; } .scnews-band-tag { display: none; } }
