@@ -125,7 +125,7 @@ const i18n = {
     faqTag: 'Häufige Fragen',
     faqTitle: 'Alles, was du wissen musst',
     faq1Q: 'Wie funktioniert der Referral-Code?',
-    faq1A: 'Beim Registrieren über den Referral-Link wird der Code STAR-VJ67-N2YG automatisch eingetragen. Nach dem Kauf eines Spielpakets werden dir 50.000 UEC gutgeschrieben — eine In-Game-Währung, die du direkt zum Kaufen von Ausrüstung nutzen kannst. Dank einer 24-Stunden-Nachfrist kannst du den Code auch kurz nach der Account-Erstellung noch nachtragen.',
+    faq1A: 'Beim Registrieren über den Referral-Link wird der Code automatisch eingetragen. Nach dem Kauf eines Spielpakets werden dir 50.000 UEC gutgeschrieben — eine In-Game-Währung, die du direkt zum Kaufen von Ausrüstung nutzen kannst. Dank einer 24-Stunden-Nachfrist kannst du den Code auch kurz nach der Account-Erstellung noch nachtragen.',
     faq2Q: 'Ist Star Citizen kostenlos spielbar?',
     faq2A: 'Star Citizen ist kein Free-to-Play-Spiel. Zum Spielen benötigst du mindestens ein Starter-Paket. Diese beinhalten ein Schiff und Spielzugang. Günstige Einstiegspakete gibt es bereits ab ~45€. Mit deinem Referral-Bonus bekommst du direkt Extra-Währung dazu.',
     faq3Q: 'Wann erscheint der Bonus in meinem Konto?',
@@ -149,7 +149,7 @@ const i18n = {
     guideTitle: 'Star Citizen starten — der komplette Guide',
     guide1Title: 'Was ist Star Citizen — und warum jetzt?',
     guide2Title: 'Was ist aUEC — und wofür nutzt man es?',
-    guide3Title: 'Referral Code: So funktioniert STAR-VJ67-N2YG',
+    guide3Title: 'Referral-Code: So funktioniert er',
     guide2Tag: 'Für Einsteiger',
     guide2MainTitle: 'Häufige Fragen zum Einstieg',
     gt1Title: 'Star Citizen vs. Elite Dangerous vs. No Man\'s Sky',
@@ -292,7 +292,7 @@ const i18n = {
     faqTag: 'FAQ',
     faqTitle: 'Everything you need to know',
     faq1Q: 'How does the referral code work?',
-    faq1A: 'When you register via the referral link, the code STAR-VJ67-N2YG is automatically applied. After purchasing any game package, 50,000 UEC are credited to your account — in-game currency you can use immediately to buy equipment. Thanks to a 24-hour grace period, you can even add the code shortly after creating your account.',
+    faq1A: 'When you register via the referral link, the code is automatically applied. After purchasing any game package, 50,000 UEC are credited to your account — in-game currency you can use immediately to buy equipment. Thanks to a 24-hour grace period, you can even add the code shortly after creating your account.',
     faq2Q: 'Is Star Citizen free to play?',
     faq2A: 'Star Citizen is not a free-to-play game. You need at least a starter package to play, which includes a ship and game access. Entry-level packages start around €45. With your referral bonus you get extra currency on top.',
     faq3Q: 'When does the bonus appear in my account?',
@@ -316,7 +316,7 @@ const i18n = {
     guideTitle: 'Getting Started in Star Citizen — The Complete Guide',
     guide1Title: 'What is Star Citizen — and why now?',
     guide2Title: 'What is aUEC — and what do you use it for?',
-    guide3Title: 'Referral Code: How STAR-VJ67-N2YG works',
+    guide3Title: 'Referral code: how it works',
     guide2Tag: 'For Beginners',
     guide2MainTitle: 'Common Questions About Getting Started',
     gt1Title: 'Star Citizen vs. Elite Dangerous vs. No Man\'s Sky',
@@ -479,7 +479,7 @@ const i18n = {
     guideTitle: 'Commencer dans Star Citizen — Le Guide Complet',
     guide1Title: 'Qu\'est-ce que Star Citizen — et pourquoi maintenant ?',
     guide2Title: 'Qu\'est-ce que l\'aUEC — et à quoi ça sert ?',
-    guide3Title: 'Code Parrainage : Comment fonctionne STAR-VJ67-N2YG',
+    guide3Title: 'Code de parrainage : comment ça marche',
     guide2Tag: 'Pour les Débutants',
     guide2MainTitle: 'Questions Courantes sur le Démarrage',
     gt1Title: 'Star Citizen vs. Elite Dangerous vs. No Man\'s Sky',
@@ -642,7 +642,7 @@ const i18n = {
     guideTitle: 'Empezar en Star Citizen — La Guía Completa',
     guide1Title: '¿Qué es Star Citizen — y por qué ahora?',
     guide2Title: '¿Qué es el aUEC — y para qué se usa?',
-    guide3Title: 'Código de Referido: Cómo funciona STAR-VJ67-N2YG',
+    guide3Title: 'Código de referido: cómo funciona',
     guide2Tag: 'Para Principiantes',
     guide2MainTitle: 'Preguntas Comunes Sobre el Inicio',
     gt1Title: 'Star Citizen vs. Elite Dangerous vs. No Man\'s Sky',
@@ -803,7 +803,7 @@ const i18n = {
     guideTitle: 'Iniziare in Star Citizen — La Guida Completa',
     guide1Title: 'Cos\'è Star Citizen — e perché ora?',
     guide2Title: 'Cos\'è l\'aUEC — e a cosa serve?',
-    guide3Title: 'Codice Referral: Come funziona STAR-VJ67-N2YG',
+    guide3Title: 'Codice referral: come funziona',
     guide2Tag: 'Per i Principianti',
     guide2MainTitle: 'Domande Comuni sull\'Inizio',
     gt1Title: 'Star Citizen vs. Elite Dangerous vs. No Man\'s Sky',
@@ -964,7 +964,7 @@ const i18n = {
     guideTitle: 'Começar em Star Citizen — O Guia Completo',
     guide1Title: 'O que é Star Citizen — e por que agora?',
     guide2Title: 'O que é aUEC — e para que serve?',
-    guide3Title: 'Código de Referência: Como funciona STAR-VJ67-N2YG',
+    guide3Title: 'Código de referência: como funciona',
     guide2Tag: 'Para Iniciantes',
     guide2MainTitle: 'Perguntas Comuns Sobre o Início',
     gt1Title: 'Star Citizen vs. Elite Dangerous vs. No Man\'s Sky',
@@ -1176,7 +1176,7 @@ function renderPage() {
   set('guide-title', t('guideTitle') || 'Star Citizen starten — der komplette Guide');
   set('guide1-title', t('guide1Title') || 'Was ist Star Citizen — und warum jetzt?');
   set('guide2-title', t('guide2Title') || 'Was ist aUEC — und wofür nutzt man es?');
-  set('guide3-title', t('guide3Title') || 'Referral Code: So funktioniert STAR-VJ67-N2YG');
+  set('guide3-title', t('guide3Title') || 'Referral-Code: So funktioniert er');
   set('guide2-tag', t('guide2Tag') || 'Für Einsteiger');
   set('guide2-main-title', t('guide2MainTitle') || 'Häufige Fragen zum Einstieg');
   set('gt1-title', t('gt1Title') || 'Star Citizen vs. Elite Dangerous vs. No Man\'s Sky');
